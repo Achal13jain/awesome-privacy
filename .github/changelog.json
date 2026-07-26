@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T13:44:09Z",
+  "generatedAt": "2026-07-26T20:45:42Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -31,6 +31,7 @@
     "229bae1e00b1c1c4c937a57121a71e3a079a8792",
     "24dca25961a0fed853190ed3c70da27bc142d2d1",
     "26817ef8c36183cb7589b29134531a35ce4e2beb",
+    "270076aa4deb927a657904c3ba5cccd5be9c75e6",
     "2a32df40e389822731ec2ab5b94c00a3a500581f",
     "2b28a28b42b9606c83e43485be5f8c830167fdaa",
     "2b84d6dfeddf3f21e26a2035c13ae4266e59b7a1",
@@ -357,9 +358,34 @@
     702,
     703,
     704,
-    705
+    705,
+    707,
+    708
   ],
   "entries": [
+    {
+      "date": "2026-07-26",
+      "sha": "270076aa4deb927a657904c3ba5cccd5be9c75e6",
+      "pr": {
+        "number": 709,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/709",
+        "author": "lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "removed": [
+            {
+              "name": "XPrivacyLua",
+              "category": "Security Tools",
+              "section": "Mobile Apps"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-07-26",
       "sha": "6086d0ba60f4dc12260db685067764a38dc22873",
@@ -6670,6 +6696,26 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-07-26",
+      "title": "Add Pixloc to Metadata Removal",
+      "pr": {
+        "number": 708,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/708",
+        "author": "UnitYX-GT",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/212277815?v=4"
+      }
+    },
+    {
+      "date": "2026-07-26",
+      "title": "Add Zapixal",
+      "pr": {
+        "number": 707,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/707",
+        "author": "Vahzryn",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/281160682?v=4"
+      }
+    },
     {
       "date": "2026-07-26",
       "title": "Add NexaTools P2P Transfer to awesome-privacy.yml",

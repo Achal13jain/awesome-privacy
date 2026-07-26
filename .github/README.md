@@ -43,7 +43,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Team Collaboration](#team-collaboration) (6)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (20)
-	- [Mobile Apps](#mobile-apps) (23)
+	- [Mobile Apps](#mobile-apps) (22)
 	- [Online Tools](#online-tools) (17)
 - **Networking**
 	- [Virtual Private Networks](#virtual-private-networks) (7)
@@ -513,7 +513,6 @@ The following browser add-ons give you better control over what content is able 
 - **[<img src='https://gitlab.com/uploads/-/system/project/avatar/18237274/ic_launcher-playstore.png?width=48' width='14' alt='' /> Insular](https://gitlab.com/secure-system/Insular)** - An actively-maintained fork of the Island project with additional enhancements 
 - **[<img src='https://exodus-privacy.eu.org/img/favicons/apple-touch-icon.png' width='14' alt='' /> Exodus](https://exodus-privacy.eu.org/en/page/what/#android-app)** - Shows which trackers, each of your installed apps is using, so that you can better understand how your data is being collected. Uses data from the Exodus database of scanned APKs. 
 - **[<img src='https://play-lh.googleusercontent.com/QbgM-Vgqp32sNMgwC0kD4kJW3YVp7xiPcVIHNcbSQgrkTIDqSfTqSBXKEvoZ9SNSjxw=w240-h480' width='14' alt='' /> Bouncer](https://play.google.com/store/apps/details?id=com.samruston.permission)** - Gives you the ability to grant permissions temporarily, so that you could for example use the camera to take a profile picture, but when you close the given app, those permissions will be revoked. 
-- **[<img src='https://raw.githubusercontent.com/M66B/XPrivacyLua/master/app/src/main/ic_launcher-web.png' width='14' alt='' /> XPrivacyLua](https://lua.xprivacy.eu/)** - Simple to use privacy manager for Android, that enables you to feed apps fake data when they request intimate permissions. Solves the problem caused by apps malfunctioning when you revoke permissions,[…](https://awesome-privacy.xyz/security-tools/mobile-apps/xprivacylua "View full XPrivacyLua report") 
 - **[<img src='https://f-droid.org/repo/icons-640/superfreeze.tool.android.1000.png' width='14' alt='' /> SuperFreezZ](https://superfreezz.gitlab.io/)** - Makes it possible to entirely freeze all background activities on a per-app basis. Intended purpose is to speed up your phone, and prolong battery life, but this app is also a great utility to stop ce[…](https://awesome-privacy.xyz/security-tools/mobile-apps/superfreezz "View full SuperFreezZ report") 
 - **[<img src='https://play-lh.googleusercontent.com/Xb_KbjGC3J8xrj1QmZqYhUq1A6aww5ikFuXfCqJonww-vz38y6xUjHzvH65AGrQU9P4=s48' width='14' alt='' /> Secure Task](https://play.google.com/store/apps/details?id=com.balda.securetask)** - Triggers actions, when certain security conditions are met, such as multiple failed login attempts or monitor settings changed. It does require Tasker, and needs to be set up with ADB, device does not[…](https://awesome-privacy.xyz/security-tools/mobile-apps/secure-task "View full Secure Task report") 
 - **[<img src='https://avatars.githubusercontent.com/u/11850518?s=200&v=4' width='14' alt='' /> Cryptomator](https://cryptomator.org/android/)** - Encrypts files and folders client-side, before uploading them to cloud storage (such as Google Drive, One Drive or Dropbox), meaning none of your personal documents leave your device in plain text. 
