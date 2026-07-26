@@ -83,7 +83,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Metadata Removal](#metadata-removal) (3)
 	- [Data Erasers](#data-erasers) (8)
 - **Operating Systems**
-	- [Mobile Operating Systems](#mobile-operating-systems) (2)
+	- [Mobile Operating Systems](#mobile-operating-systems) (3)
 	- [Desktop Operating Systems](#desktop-operating-systems) (5)
 	- [Linux Defenses](#linux-defenses) (6)
 	- [Windows Defences](#windows-defences) (16)
@@ -1459,6 +1459,7 @@ is an open source, usually Google-free mobile OS that can be flashed to your dev
 
 - **[<img src='https://grapheneos.org/apple-touch-icon.png' width='14' alt='' /> GrapheneOS](https://grapheneos.org/)** - GrapheneOS is an open source privacy and security focused mobile OS with Android app compatibility. Developed by Daniel Micay. GrapheneOS is a young project, and currently only supports Pixel devices,[…](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/grapheneos "View full GrapheneOS report") 
 - **[<img src='https://www.lineageos.org/images/logo.png' width='14' alt='' /> LineageOS](https://www.lineageos.org)** - A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained, supports a wide range of devices, and comes bundled with P[…](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/lineageos "View full LineageOS report") 
+- **[<img src='https://calyxos.org/assets/images/favicon/apple-touch-icon.png' width='14' alt='' /> CalyxOS](https://calyxos.org)** - An open source, de-Googled Android OS focused on privacy and security, with optional microG, a built-in firewall and encrypted backups. Runs on select Google Pixel, Fairphone and Motorola devices, and[…](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/calyxos "View full CalyxOS report") 
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>

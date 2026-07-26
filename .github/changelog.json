@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T12:52:10Z",
+  "generatedAt": "2026-07-26T13:44:09Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -77,6 +77,7 @@
     "5ec99fe78361e422648aec2eff69375fcc3ca810",
     "5f84c75e9a52780eca896e9cbce656698412a372",
     "604c93a2383beb8819caec46aee394ef310274af",
+    "6086d0ba60f4dc12260db685067764a38dc22873",
     "60f4dbb1d011f460385c7fe29b92bf0d122cd615",
     "61204318c73bb25efae3567bf64e55522b69cc47",
     "615fc63dbbcfc19a5fb911d893c2bc40ad33ab69",
@@ -346,9 +347,42 @@
     687,
     688,
     689,
-    694
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    701,
+    702,
+    703,
+    704,
+    705
   ],
   "entries": [
+    {
+      "date": "2026-07-26",
+      "sha": "6086d0ba60f4dc12260db685067764a38dc22873",
+      "pr": {
+        "number": 706,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/706",
+        "author": "lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "CalyxOS",
+              "category": "Operating Systems",
+              "section": "Mobile Operating Systems"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-07-23",
       "sha": "4cd0c3b0e0fb9b744b742c02341d1b0d8d92c625",
@@ -6636,6 +6670,86 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-07-26",
+      "title": "Add NexaTools P2P Transfer to awesome-privacy.yml",
+      "pr": {
+        "number": 705,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/705",
+        "author": "mariselviraja1988-create",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/248370759?v=4"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Adds GUPT to Encrypted Messaging",
+      "pr": {
+        "number": 702,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/702",
+        "author": "besoeasy",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/8281782?v=4"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Add 'Spoof Me' extension for browser fingerprinting",
+      "pr": {
+        "number": 701,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/701",
+        "author": "salemalem",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/42411937?v=4"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Add Mainspring to Mac OS Defences",
+      "pr": {
+        "number": 699,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/699",
+        "author": "chipmunk1101",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/3656407?v=4"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Add TryDocsy tool for PDF editing",
+      "pr": {
+        "number": 698,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/698",
+        "author": "SoloEminence",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/132285546?v=4"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Add REDACT privacy eraser for Windows",
+      "pr": {
+        "number": 697,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/697",
+        "author": "yonasabeselom",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/52823427?v=4"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Add PressImg image compressor to awesome-privacy.yml",
+      "pr": {
+        "number": 696,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/696",
+        "author": "LozovaPolina",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114875877?v=4"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Add TryDocsy to awesome-privacy.yml",
+      "pr": {
+        "number": 695,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/695",
+        "author": "SoloEminence",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/132285546?v=4"
+      }
+    },
     {
       "date": "2026-07-23",
       "title": "Add Logue to Digital Notes",
