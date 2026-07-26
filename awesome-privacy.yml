@@ -4028,6 +4028,17 @@ categories:
           A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained,
           supports a wide range of devices, and comes bundled with Privacy Guard.
 
+      - name: CalyxOS
+        url: https://calyxos.org
+        icon: https://calyxos.org/assets/images/favicon/apple-touch-icon.png
+        git: https://gitlab.com/CalyxOS
+        tosdrId: 2558
+        openSource: true
+        description: |
+          An open source, de-Googled Android OS focused on privacy and security, with optional microG,
+          a built-in firewall and encrypted backups. Runs on select Google Pixel, Fairphone and
+          Motorola devices, and is developed by the non-profit Calyx Institute.
+
       notableMentions: |
         [Replicant OS](https://www.replicant.us/) is a fully-featured distro,
         with an emphasis on freedom, privacy and security.
