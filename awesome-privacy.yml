@@ -1635,17 +1635,6 @@ categories:
           use the camera to take a profile picture, but when you close the given app, those permissions
           will be revoked.
 
-      - name: XPrivacyLua
-        url: https://lua.xprivacy.eu/
-        icon: https://raw.githubusercontent.com/M66B/XPrivacyLua/master/app/src/main/ic_launcher-web.png
-        github: M66B/XPrivacyLua
-        description: |
-          Simple to use privacy manager for Android, that enables you to feed apps fake data when
-          they request intimate permissions. Solves the problem caused by apps malfunctioning when
-          you revoke permissions, and protects your real data by only sharing fake information. Enables
-          you to hide call log, calendar, SMS messages, location, installed apps, photos, clipboard,
-          network data plus more. And prevents access to camera, microphone, telemetry, GPS and other sensors.
-
       - name: SuperFreezZ
         url: https://superfreezz.gitlab.io/
         git: https://gitlab.com/SuperFreezZ/SuperFreezZ
