@@ -127,6 +127,15 @@ categories:
           Store secrets and passwords on encrypted paper with distributed keys.
           Designed to last generations. Open source, client-side only, works offline.
 
+      - name: 2of3 by Ente
+        url: https://2of3.ente.com
+        git: https://github.com/ente/ente/tree/main/web/apps/twoof3
+        openSource: true
+        discordInvite: z2YVKkycX3
+        description: |
+          Turn a recovery key, password, or other secret into 3 cards you can keep in
+          different places. Open-source, client-side only, with an offline recovery page.
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
