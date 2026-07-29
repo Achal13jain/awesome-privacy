@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T20:45:42Z",
+  "generatedAt": "2026-07-29T09:05:23Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -185,6 +185,7 @@
     "e55f08c8337bf322a0b10d1b6c9827cb2bac5a64",
     "e60f397fd1fc7703fc2258ce4b65d585259040a2",
     "e7474c579b7e33b3c47ed76492068d914e4566f1",
+    "e7e2f212ad761b58d30d870158db23ab21b3a423",
     "e8bd96dde0f2b147e6472605d9db8da34dfd31b4",
     "e9b1fee82705ca9b52a9db6e081d46bc4c417f01",
     "eb3b8411aea7bca9e3093a66b8313ade4e516ffc",
@@ -360,9 +361,38 @@
     704,
     705,
     707,
-    708
+    708,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716
   ],
   "entries": [
+    {
+      "date": "2026-07-29",
+      "sha": "e7e2f212ad761b58d30d870158db23ab21b3a423",
+      "pr": {
+        "number": 710,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/710",
+        "author": "ltguillaume",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/4777345?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "2of3 by Ente",
+              "category": "Essentials",
+              "section": "Password Managers"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-07-26",
       "sha": "270076aa4deb927a657904c3ba5cccd5be9c75e6",
@@ -6696,6 +6726,56 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-07-29",
+      "title": "Add vault core to password managers",
+      "pr": {
+        "number": 716,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/716",
+        "author": "designer1977",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/306735891?v=4"
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Add Yap under Accessibility",
+      "pr": {
+        "number": 715,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/715",
+        "author": "christianmat",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/9771548?v=4"
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Add PGP Tools to awesome-privacy.yml",
+      "pr": {
+        "number": 714,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/714",
+        "author": "Acorn221",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/28987083?v=4"
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Add MultiDrive utility to awesome-privacy.yml",
+      "pr": {
+        "number": 713,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/713",
+        "author": "mokosiy",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/7067553?v=4"
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "title": "[Add] DocRedact in Online Tools",
+      "pr": {
+        "number": 711,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/711",
+        "author": "shadab127",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/26279890?v=4"
+      }
+    },
     {
       "date": "2026-07-26",
       "title": "Add Pixloc to Metadata Removal",

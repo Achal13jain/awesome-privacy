@@ -26,7 +26,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 <summary>📋 <b>Contents</b></summary>
 
 - **Essentials**
-	- [Password Managers](#password-managers) (7)
+	- [Password Managers](#password-managers) (8)
 	- [2-Factor Authentication](#2-factor-authentication) (11)
 	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (5)
@@ -138,6 +138,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **[<img src='https://www.zx2c4.com/favicon.ico' width='14' alt='' /> Pass](https://www.passwordstore.org/)** - The Standard Unix Password Manager 
 - **[<img src='https://www.aliasvault.net/favicon.png' width='14' alt='' /> AliasVault](https://www.aliasvault.net)** - End-to-end encrypted open source password and alias manager with built-in email server. AliasVault protects your privacy by creating alternative identities, passwords and email addresses for every web[…](https://awesome-privacy.xyz/essentials/password-managers/aliasvault "View full AliasVault report") 
 - **[<img src='https://papervault.xyz/papervault-512.png' width='14' alt='' /> PaperVault](https://papervault.xyz)** - Store secrets and passwords on encrypted paper with distributed keys. Designed to last generations. Open source, client-side only, works offline. 
+- **[<img src='https://icon.horse/icon/2of3.ente.com' width='14' alt='' /> 2of3 by Ente](https://2of3.ente.com)** - Turn a recovery key, password, or other secret into 3 cards you can keep in different places. Open-source, client-side only, with an offline recovery page. 
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
