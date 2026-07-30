@@ -743,7 +743,7 @@ categories:
       wordOfWarning: >
         Many messaging apps claim to be secure, but if they are not open source,
         then this cannot be verified - and they **should not be trusted**.
-        This applies to [Telegram](https://telegram.org), [Threema](https://threema.ch),
+        This applies to [Telegram](https://telegram.org),
         [Cypher](https://www.goldenfrog.com/cyphr), [Wickr](https://wickr.com/),
         [Silent Phone](https://www.silentcircle.com/products-and-solutions/silent-phone/)
         and [Viber](https://www.viber.com/), to name a few - these apps should not
