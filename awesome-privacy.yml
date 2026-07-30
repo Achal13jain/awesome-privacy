@@ -740,6 +740,11 @@ categories:
             defined in [EFAIL](https://efail.de/), so although it still considered
             secure for general purpose use, for general chat, it may be better to
             use an encrypted messaging or email app instead.
+        - name: Threema
+          url: https://threema.ch
+          description: >
+            A paid, business-focused Swiss messenger. The apps are open source,
+            but the server is proprietary.
       wordOfWarning: >
         Many messaging apps claim to be secure, but if they are not open source,
         then this cannot be verified - and they **should not be trusted**.
