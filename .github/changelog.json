@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T09:05:23Z",
+  "generatedAt": "2026-08-02T21:11:33Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -60,6 +60,7 @@
     "4396c163483fe7aaecb54e719ee5f3df690e146b",
     "45a87356b37a54a2d289d5018bdbcb5a56575a02",
     "45c13a7ff5af259b895a833e785e3f4a56b46a97",
+    "46279446b308aa665734d590e4625f3955714b23",
     "463d62190462ca5dfdf71fa72234a10e6dbcdd48",
     "474de7b56c37fb9bf8991fcc3e42df91acc74049",
     "47cd53ef705bb9ae855e521bc68c0597b14f7325",
@@ -220,6 +221,7 @@
     386,
     388,
     390,
+    394,
     396,
     399,
     401,
@@ -254,6 +256,7 @@
     474,
     475,
     476,
+    478,
     479,
     482,
     483,
@@ -292,6 +295,7 @@
     560,
     565,
     569,
+    578,
     579,
     580,
     581,
@@ -367,9 +371,43 @@
     713,
     714,
     715,
-    716
+    716,
+    717,
+    721,
+    722,
+    723,
+    724,
+    725,
+    726,
+    727,
+    728,
+    729,
+    730
   ],
   "entries": [
+    {
+      "date": "2026-08-02",
+      "sha": "46279446b308aa665734d590e4625f3955714b23",
+      "pr": {
+        "number": 720,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/720",
+        "author": "aglairdev",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/75555836?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "DeArrow",
+              "category": "Security Tools",
+              "section": "Browser Extensions"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-07-29",
       "sha": "e7e2f212ad761b58d30d870158db23ab21b3a423",
@@ -6727,6 +6765,116 @@
   ],
   "rejections": [
     {
+      "date": "2026-08-02",
+      "title": "Add Presend to Metadata Removal",
+      "pr": {
+        "number": 730,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/730",
+        "author": "presendapp",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/300177977?v=4"
+      }
+    },
+    {
+      "date": "2026-08-02",
+      "title": "Add RegexPilot to Developer Tools",
+      "pr": {
+        "number": 729,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/729",
+        "author": "Kristofp",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/11627479?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to awesome-privacy.yml",
+      "pr": {
+        "number": 728,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/728",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to awesome-privacy.yml",
+      "pr": {
+        "number": 727,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/727",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to awesome-privacy.yml",
+      "pr": {
+        "number": 726,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/726",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to awesome-privacy.yml",
+      "pr": {
+        "number": 725,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/725",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to awesome-privacy.yml",
+      "pr": {
+        "number": 724,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/724",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to the Creativity section",
+      "pr": {
+        "number": 723,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/723",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to awesome-privacy.yml",
+      "pr": {
+        "number": 722,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/722",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Add ToolMole to awesome-privacy.yml",
+      "pr": {
+        "number": 721,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/721",
+        "author": "soys5086",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/114172726?v=4"
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "title": "Adds Coin Wallet to Crypto Wallets",
+      "pr": {
+        "number": 717,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/717",
+        "author": "Dolorozo",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/75801683?v=4"
+      }
+    },
+    {
       "date": "2026-07-29",
       "title": "Add vault core to password managers",
       "pr": {
@@ -7387,6 +7535,16 @@
       }
     },
     {
+      "date": "2026-07-30",
+      "title": "Add Hidden Lake to Anonymity networks",
+      "pr": {
+        "number": 578,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/578",
+        "author": "number571",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/31502293?v=4"
+      }
+    },
+    {
       "date": "2026-06-16",
       "title": "Removes Privacy Badger from Browser Extensions",
       "pr": {
@@ -7424,16 +7582,6 @@
         "url": "https://github.com/lissy93/awesome-privacy/pull/557",
         "author": "heysteamer",
         "authorAvatar": "https://avatars.githubusercontent.com/u/195606194?v=4"
-      }
-    },
-    {
-      "date": "2026-05-16",
-      "title": "Add firefox-stealth (Firefox hardening patches) to Browsers",
-      "pr": {
-        "number": 554,
-        "url": "https://github.com/lissy93/awesome-privacy/pull/554",
-        "author": "feder-cr",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/85809106?v=4"
       }
     },
     {
@@ -7714,6 +7862,16 @@
         "url": "https://github.com/Lissy93/awesome-privacy/pull/479",
         "author": "serhat961",
         "authorAvatar": "https://avatars.githubusercontent.com/u/61142546?v=4"
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "title": "Add Typer to Voice Assistants",
+      "pr": {
+        "number": 478,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/478",
+        "author": "duarte",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/4561?v=4"
       }
     },
     {
@@ -8024,6 +8182,16 @@
         "url": "https://github.com/Lissy93/awesome-privacy/pull/396",
         "author": "serhat961",
         "authorAvatar": "https://avatars.githubusercontent.com/u/61142546?v=4"
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "title": "Add Off Grid - fully offline on-device AI for mobile",
+      "pr": {
+        "number": 394,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/394",
+        "author": "alichherawalla",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/4958010?v=4"
       }
     },
     {
