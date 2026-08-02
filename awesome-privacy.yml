@@ -740,10 +740,15 @@ categories:
             defined in [EFAIL](https://efail.de/), so although it still considered
             secure for general purpose use, for general chat, it may be better to
             use an encrypted messaging or email app instead.
+        - name: Threema
+          url: https://threema.ch
+          description: >
+            A paid, business-focused Swiss messenger. The apps are open source,
+            but the server is proprietary.
       wordOfWarning: >
         Many messaging apps claim to be secure, but if they are not open source,
         then this cannot be verified - and they **should not be trusted**.
-        This applies to [Telegram](https://telegram.org), [Threema](https://threema.ch),
+        This applies to [Telegram](https://telegram.org),
         [Cypher](https://www.goldenfrog.com/cyphr), [Wickr](https://wickr.com/),
         [Silent Phone](https://www.silentcircle.com/products-and-solutions/silent-phone/)
         and [Viber](https://www.viber.com/), to name a few - these apps should not
