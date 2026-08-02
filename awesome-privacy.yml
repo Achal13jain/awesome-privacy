@@ -1569,6 +1569,15 @@ categories:
           unwanted parts of YouTube videos using community-submitted timestamps.
           **Download**: [Firefox](https://addons.mozilla.org/firefox/addon/sponsorblock/) - [Chrome](https://chromewebstore.google.com/detail/sponsorblock-para-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
 
+      - name: DeArrow
+        url: https://dearrow.ajay.app/
+        github: ajayyy/DeArrow
+        icon: https://dearrow.ajay.app/icons/icon-192x192.png?v=6f203adf3dc83cd564c279fa5c263c62
+        description: |
+          Crowdsourced browser extension that replaces YouTube video titles and
+          thumbnails using community-submitted versions to stop clickbait.
+          **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/dearrow/) - [Chrome](https://chromewebstore.google.com/detail/dearrow-better-titles-and/enamippconapkdmgfgjchkhakpfinmaj)
+
       notableMentions:
       - name: Extension source viewer
         url: https://addons.mozilla.org/en-US/firefox/addon/crxviewer
