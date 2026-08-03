@@ -30,7 +30,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [2-Factor Authentication](#2-factor-authentication) (11)
 	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (5)
-	- [Search Engines](#search-engines) (6)
+	- [Search Engines](#search-engines) (7)
 - **Communication**
 	- [Encrypted Messaging](#encrypted-messaging) (4)
 	- [P2P Messaging](#p2p-messaging) (4)
@@ -253,6 +253,7 @@ that makes a good alternative to BitLocker.
 - **[<img src='https://i.ibb.co/GH1n4wf/Brave-Search-Icon.png' width='14' alt='' /> Brave Search](https://search.brave.com/)** - Brave Search is a privacy-focused search engine that does not track users or their searches, does not use secret algorithms or user profiling, and is based on its own search index. 
 - **[<img src='https://www.mojeek.com/favicon.png' width='14' alt='' /> Mojeek](https://mojeek.com)** - British search engine providing independent and unbiased search results using its own crawler. Has a zero tracking policy (it is not open source) 
 - **[<img src='https://uruky.com/public/images/favicon.svg' width='14' alt='' /> Uruky](https://uruky.com)** - Uruky is an ad-free, private search engine focused on personalization. It uses, among other providers, Mojeek and Marginalia. It is EU-based and does not keep or track any personal data (it is not 100[…](https://awesome-privacy.xyz/essentials/search-engines/uruky "View full Uruky report") 
+- **[<img src='https://prieco.net/static/img/prieco.webp' width='14' alt='' /> PriEco](https://prieco.net)** - PriEco is an independent web search engine with growing index. It is EU-based and 100% open source. It allows customization via Goggles. 
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T22:30:48Z",
+  "generatedAt": "2026-08-03T20:36:19Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -113,6 +113,7 @@
     "88bc6299bfbaf786e134238c45ac4d9a6aa7de24",
     "88c0cb324458962c52691a05384aab459bf740b2",
     "8950c0b79c0fc336f579002466dcc2f8eaad43ea",
+    "8a5acefb4be375961dfda8fdc99e3a6ff028371e",
     "8c0cdf76b53040df0fe362941ca4a085d346ce8a",
     "8d3c89895f72fc663c6ebd0e68525ef8167b5a02",
     "8ee48cc161dd204f6eea70e8988ad3d4eb17e0c7",
@@ -383,9 +384,34 @@
     727,
     728,
     729,
-    730
+    730,
+    731,
+    732
   ],
   "entries": [
+    {
+      "date": "2026-08-03",
+      "sha": "8a5acefb4be375961dfda8fdc99e3a6ff028371e",
+      "pr": {
+        "number": 719,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/719",
+        "author": "JojoYou",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/61913764?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "PriEco",
+              "category": "Essentials",
+              "section": "Search Engines"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-02",
       "sha": "46279446b308aa665734d590e4625f3955714b23",
@@ -6765,6 +6791,26 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-03",
+      "title": "Adds Glyph to Digital Notes",
+      "pr": {
+        "number": 732,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/732",
+        "author": "SidhuK",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/22849795?v=4"
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Add DarkVPS to Cloud Hosting",
+      "pr": {
+        "number": 731,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/731",
+        "author": "darkvpshosting",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/245390928?v=4"
+      }
+    },
     {
       "date": "2026-08-02",
       "title": "Add Presend to Metadata Removal",
