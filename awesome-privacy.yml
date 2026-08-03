@@ -628,6 +628,18 @@ categories:
           or track any personal data (it is not 100% open source, but after 12 months as
           a paying customer, you get a copy of the source code).
 
+      - name: PriEco
+        url: https://prieco.net
+        icon: https://prieco.net/static/img/prieco.webp
+        openSource: true
+        codeberg: https://codeberg.org/JojoYou/PriEco/
+        tosdrId: 9994
+        acceptsCrypto: true
+        discordInvite: 'https://discord.gg/gmUgAVkTKx'
+        description: |
+          PriEco is an independent web search engine with growing index.
+          It is EU-based and 100% open source. It allows customization via Goggles.
+
       notableMentions:
       - name: MetaGear
         url: https://metager.org
@@ -5581,4 +5593,3 @@ categories:
         description: An animated sprite editor & pixel art tool for Windows, macOS and Linux.
         github: https://github.com/aseprite/aseprite
         openSource: true
-
