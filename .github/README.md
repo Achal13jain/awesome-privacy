@@ -99,7 +99,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Security Cameras](#security-cameras) (1)
 - **Finance**
 	- [Cryptocurrencies](#cryptocurrencies) (2)
-	- [Crypto Wallets](#crypto-wallets) (7)
+	- [Crypto Wallets](#crypto-wallets) (6)
 	- [Crypto Exchanges](#crypto-exchanges) (2)
 	- [Virtual Credit Cards](#virtual-credit-cards) (2)
 	- [Other Payment Methods](#other-payment-methods) (3)
@@ -1891,7 +1891,6 @@ be physically tracked (CCTV, phone location, card payments etc)
 
 - **[<img src='https://wasabiwallet.io/img/favicon.ico' width='14' alt='' /> Wasabi Wallet](https://www.wasabiwallet.io)** - An open source, native desktop wallet for Windows, Linux, and MacOS. Wasabi implements trustless CoinJoins over the Tor network. Neither an observer nor the participants can determine which output bel[…](https://awesome-privacy.xyz/finance/crypto-wallets/wasabi-wallet "View full Wasabi Wallet report") 
 - **[<img src='https://trezor.io/favicon/apple-touch-icon.png' width='14' alt='' /> Trezor](https://trezor.io)** - Open source, cross-platform, offline, crypto wallet, compatible with 1000+ coins. Your private key is generated on the device, and never leaves it, all transactions are signed by the Trezor, which ens[…](https://awesome-privacy.xyz/finance/crypto-wallets/trezor "View full Trezor report") 
-- **[<img src='https://icon.horse/icon/coldcardwallet.com' width='14' alt='' /> ColdCard](https://coldcardwallet.com/)** - An easy-to-use, super secure Bitcoin hardware wallet, which can be used independently as an air-gapped wallet. ColdCard is based on partially signed Bitcoin transactions following the BIP174 standard.[…](https://awesome-privacy.xyz/finance/crypto-wallets/coldcard "View full ColdCard report") 
 - **[<img src='https://icon.horse/icon/electrum.org' width='14' alt='' /> Electrum](https://electrum.org/)** - Long-standing Python-based Bitcoin wallet with good security features. Private keys are encrypted and do not touch the internet and balance is checked with a watch-only wallet. Compatible with other w[…](https://awesome-privacy.xyz/finance/crypto-wallets/electrum "View full Electrum report") 
 - **[<img src='https://icon.horse/icon/sparrowwallet.com' width='14' alt='' /> Sparrow Wallet](https://sparrowwallet.com/)** - Sparrow is a Bitcoin wallet for those who value financial self-sovereignty. Sparrow’s emphasis is on security, privacy, and usability. Sparrow does not hide information from you - on the contrary, it[…](https://awesome-privacy.xyz/finance/crypto-wallets/sparrow-wallet "View full Sparrow Wallet report") 
 - **[<img src='https://icon.horse/icon/cryptosteel.com' width='14' alt='' /> CryptoSteel](https://cryptosteel.com/how-it-works)** - A steel plate, with engraved letters which can be permanently screwed - CryptoSteel is a good fire-proof, shock-proof, water-proof, and stainless cryptocurrency backup solution. 

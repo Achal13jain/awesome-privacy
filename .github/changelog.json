@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T20:36:19Z",
+  "generatedAt": "2026-08-04T07:57:45Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -95,6 +95,7 @@
     "7177ba26e054a6f173ec451b420ee64d5fdef69b",
     "719de567d40d3be7714c3206fb76a41d93c61910",
     "75ad504f96da49df98dc30842d820fd74c85deb0",
+    "76d2c5dbf503ee8fd558fe5f0f65053d8337120e",
     "77a0e3eb620e1324b194d619d44cb6f4b6b17006",
     "78d83c0266281333143f9a0cb5e6d6af6439befd",
     "7a3286122e197a9b5836cfcd73fca768ccf6f50e",
@@ -386,9 +387,34 @@
     729,
     730,
     731,
-    732
+    732,
+    733,
+    735
   ],
   "entries": [
+    {
+      "date": "2026-08-04",
+      "sha": "76d2c5dbf503ee8fd558fe5f0f65053d8337120e",
+      "pr": {
+        "number": 736,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/736",
+        "author": "egkz",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/10755037?v=4"
+      },
+      "changes": {
+        "services": {
+          "removed": [
+            {
+              "name": "ColdCard",
+              "category": "Finance",
+              "section": "Crypto Wallets"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-03",
       "sha": "8a5acefb4be375961dfda8fdc99e3a6ff028371e",
@@ -6791,6 +6817,26 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-04",
+      "title": "Adds norito Remove Metadata to Online Tools",
+      "pr": {
+        "number": 735,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/735",
+        "author": "shubhmisaki",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/22341502?v=4"
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Add Zapixal tool for image conversion",
+      "pr": {
+        "number": 733,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/733",
+        "author": "Vahzryn",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/281160682?v=4"
+      }
+    },
     {
       "date": "2026-08-03",
       "title": "Adds Glyph to Digital Notes",
