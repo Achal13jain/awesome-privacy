@@ -13,8 +13,8 @@ const categories = (await fetchData())?.categories || ([] as Category[]);
 
 <Layout title="Saved Services">
 	<main>
+		<h1 class="sr-only">Saved Services</h1>
 		<div class="top-row">
-			<!-- <h2>Inventory</h2> -->
 			<EditableTitle client:load />
 			<GetSharableLink client:load />
 		</div>
@@ -48,7 +48,7 @@ const categories = (await fetchData())?.categories || ([] as Category[]);
 			font-weight: bold;
 			font-size: var(--text-4xl);
 			margin: 0;
-			color: var(--accent-3);
+			color: var(--accent-3-text);
 		}
 		.buttons {
 			margin: var(--space-md) auto;

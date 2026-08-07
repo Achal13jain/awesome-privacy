@@ -85,7 +85,7 @@
     width: 80vw;
     max-width: 900px;
     margin: var(--space-md) auto;
-    color: var(--accent-3);
+    color: var(--accent-3-text);
     font-size: var(--text-xl);
   }
   section {
@@ -96,7 +96,7 @@
     max-width: 900px;
     margin: 0 auto;
     .service-result {
-      background: var(--accent-fg);
+      background: var(--surface);
       padding: var(--space-md);
       border-radius: var(--curve-sm);
       border: var(--border-light);
@@ -133,7 +133,7 @@
 
           font-size: 10px;
           overflow: hidden;
-          color: var(--accent);
+          color: var(--accent-text);
         }
 
         .service-link {

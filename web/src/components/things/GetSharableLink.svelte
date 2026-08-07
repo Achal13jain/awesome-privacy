@@ -65,7 +65,7 @@
     box-shadow: var(--shadow-sm);
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--curve-sm);
-    color: var(--foreground);
+    color: var(--accent-3-fg);
     font-family: var(--font-subtitle);
     font-size: var(--text-md);
     cursor: pointer;

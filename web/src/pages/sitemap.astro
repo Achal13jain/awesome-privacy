@@ -8,7 +8,7 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 
 <Layout title="All Links | Awesome Privacy">
 	<main>
-		<h2>Sitemap</h2>
+		<h1>Sitemap</h1>
 		<p>
 			Below is a full listing of all pages on this site.<br />
 			<small
@@ -151,7 +151,7 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 		padding: 0 var(--space-lg);
 		border: var(--border-heavy);
 		box-shadow: var(--shadow-lg);
-		background: var(--accent-fg);
+		background: var(--surface);
 		position: relative;
 		p {
 			font-size: var(--text-lg);
@@ -168,8 +168,7 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 		ul {
 			padding-left: 1.2rem;
 			list-style: none;
-			border-left: 3px solid var(--transparent-accent);
-			border-radius: 4px;
+			border-left: 1px solid var(--surface-line);
 			li {
 				font-weight: 600;
 				ul li {
@@ -197,7 +196,8 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 		}
 	}
 
-	h2 {
+	h1 {
+		font-family: var(--font-subtitle);
 		font-size: var(--text-3xl);
 		margin: -2rem 0 var(--space-lg) -4rem;
 		box-shadow: var(--shadow-lg);
@@ -233,7 +233,7 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 			border-radius: var(--curve-sm);
 			font-size: var(--text-base);
 			box-shadow: var(--shadow-sm);
-			color: var(--accent-3);
+			color: var(--accent-3-text);
 			background: var(--background-form);
 			&:focus {
 				outline: none;

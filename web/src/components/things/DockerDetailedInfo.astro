@@ -21,7 +21,7 @@ const formatBigNumber = (num: number): string => {
     { docker.template && (
       <h4>Container Info</h4>
       <p class="dockerhub-title">
-        <img src={docker.template.logo} alt="" width="16" />
+        <img src={docker.template.logo} alt="" width="16" loading="lazy" />
         {docker.template.name}
       </p>
       <p class="dockerhub-description">{docker.template.description}</p>

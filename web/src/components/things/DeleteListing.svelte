@@ -66,7 +66,7 @@
       width: 1rem;
       transition: var(--transition-normal);
       &:hover {
-        color: var(--accent-3);
+        color: var(--accent-3-text);
         opacity: 1;
       }
     }

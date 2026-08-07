@@ -156,7 +156,7 @@ const { previous, next } = makePaginationLinks();
       </span>
     </div>
 
-    <h2>{title}</h2>
+    <h1>{title}</h1>
 
     {intro && (
       <section class="intro">
@@ -187,7 +187,7 @@ const { previous, next } = makePaginationLinks();
 
     {notableMentions && (
       <section class="notable-mentions">
-        <h3>Notable Mentions</h3>
+        <h2>Notable Mentions</h2>
         { Array.isArray(notableMentions) ?
           <ul>
             {notableMentions.map((mention) => (
@@ -207,20 +207,20 @@ const { previous, next } = makePaginationLinks();
 
     {furtherInfo && (
       <section class="further-info">
-        <h3>Notes</h3>
+        <h2>Notes</h2>
         <p set:html={parseMarkdown(furtherInfo)}></p>
       </section>
     )}
 
     {wordOfWarning && (
       <section class="word-of-warning">
-        <h3>Word of Warning</h3>
+        <h2>Word of Warning</h2>
         <p set:html={parseMarkdown(wordOfWarning)}></p>
       </section>
     )}
 
     {services.length > 0 && (<section class="submit-alternative">
-      <h3>Submit New Entry</h3>
+      <h2>Submit New Entry</h2>
       <p>
         Are we missing anything?
         You can help us improve this page, by <a href="/submit">submitting a new entry</a>
@@ -257,7 +257,8 @@ section {
   }
 }
 
-h2 {
+h1 {
+    font-family: var(--font-subtitle);
     font-size: var(--text-3xl);
     margin: -2rem 0 var(--space-lg) -2rem;
     box-shadow: var(--shadow-lg);

@@ -335,7 +335,7 @@
 {/if}
 
 {#each Object.entries(grouped) as [month, monthItems] (month)}
-  <h3 class="month-header">{month}</h3>
+  <h2 class="month-header">{month}</h2>
   {#each monthItems as item (item.sha)}
     <article class="entry">
       <time class="entry-date">{formatDate(item.date)}</time>
@@ -449,7 +449,7 @@
       border: var(--border-heavy);
       border-radius: var(--curve-lg);
       box-shadow: var(--shadow-xs);
-      background: var(--accent-fg);
+      background: var(--surface);
       color: var(--foreground);
       &:focus {
         outline: none;
@@ -536,7 +536,7 @@
     margin: 1.5rem 0 var(--space-sm) 0;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid var(--accent-3);
-    color: var(--accent-3);
+    color: var(--accent-3-text);
     font-family: var(--font-subtitle);
   }
 
@@ -573,7 +573,7 @@
     .author a {
       color: var(--foreground);
       &:hover {
-        color: var(--accent);
+        color: var(--accent-text);
       }
     }
     .avatar {
@@ -630,7 +630,7 @@
     text-decoration: none;
   }
   a.svc-name:hover {
-    color: var(--accent);
+    color: var(--accent-text);
     text-decoration: underline;
   }
 

@@ -76,6 +76,10 @@
     viewReport: solidIcons.faShieldHalved,
     externalLink: solidIcons.faArrowUpRightFromSquare,
 
+    // Theme
+    themeDark: solidIcons.faMoon,
+    themeLight: solidIcons.faSun,
+
     //Misc
     ratingStar: solidIcons.faStar,
     saveListing: solidIcons.faBookmark,

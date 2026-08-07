@@ -103,7 +103,7 @@ const description =
 		display: flex;
 		align-items: end;
 		gap: var(--space-md);
-		background: var(--accent-fg);
+		background: var(--surface);
 		border: var(--border-heavy);
 		border-radius: var(--curve-sm);
 		box-shadow: var(--shadow-lg);
@@ -126,7 +126,7 @@ const description =
 			flex-shrink: 0;
 			padding: var(--space-sm) var(--space-lg);
 			background: var(--accent-3);
-			color: var(--accent-fg);
+			color: var(--accent-3-fg);
 			font-family: var(--font-subtitle);
 			font-size: var(--text-md);
 			font-weight: bold;
@@ -154,19 +154,19 @@ const description =
 
 	h2 {
 		font-size: var(--text-4xl);
-		color: var(--accent-3);
+		color: var(--accent-3-text);
 		font-family: var(--font-subtitle);
 		text-align: center;
 		margin: var(--space-xl) 0 var(--space-md) 0;
 		a {
 			text-decoration: none;
-			color: var(--accent-3);
+			color: var(--accent-3-text);
 			@include underline-hover(var(--accent));
 		}
 	}
 
 	.about-summary {
-		background: var(--accent-fg);
+		background: var(--surface);
 		border: var(--border-heavy);
 		border-radius: var(--curve-sm);
 		box-shadow: var(--shadow-md);
@@ -186,7 +186,7 @@ const description =
 		column-gap: var(--space-md);
 		padding: 0;
 		.category {
-			background: var(--accent-fg);
+			background: var(--surface);
 			border: var(--border-heavy);
 			border-radius: var(--curve-sm);
 			box-shadow: var(--shadow-md);
@@ -217,7 +217,7 @@ const description =
 						color: var(--foreground);
 					}
 					.service-count {
-						color: var(--accent-3);
+						color: var(--accent-3-text);
 					}
 				}
 			}

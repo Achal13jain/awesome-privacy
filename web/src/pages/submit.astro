@@ -11,8 +11,9 @@ const commits = ((await fetchGitHubStats('lissy93/awesome-privacy')) || {})
 const isDisabled = true; // will set this back to false if/when we have better way to manage the AI spam
 ---
 
-<Layout title="Awesome Privacy">
+<Layout title="Submit a Change | Awesome Privacy">
 	<section>
+		<h1 class="page-title">Submit a Change</h1>
 		<h2>About our Data</h2>
 		<p class="about-data">
 			All data on Awesome Privacy is community maintained via Git, this keeps
@@ -115,7 +116,7 @@ const isDisabled = true; // will set this back to false if/when we have better w
 						<li title={commit.sha}>
 							{commit.message}
 							<br />
-							<img width="14" src={commit.authorAvatar} alt="" />
+							<img width="14" src={commit.authorAvatar} alt="" loading="lazy" />
 							<small>
 								By{' '}
 								<a href={`https://github.com/${commit.authorUsername}`}>
@@ -147,7 +148,7 @@ const isDisabled = true; // will set this back to false if/when we have better w
 		padding: 0 var(--space-lg);
 		border: var(--border-heavy);
 		box-shadow: var(--shadow-lg);
-		background: var(--accent-fg);
+		background: var(--surface);
 		border-radius: var(--curve-sm);
 		@media (max-width: 768px) {
 			max-width: 95%;

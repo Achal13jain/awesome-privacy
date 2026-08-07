@@ -64,7 +64,7 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 								class="service-title"
 								href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}
 							>
-								{subHeading ? <h4>{service.name}</h4> : <h3>{service.name}</h3>}
+								{subHeading ? <h3>{service.name}</h3> : <h2>{service.name}</h2>}
 							</a>
 							{service.followWith && (
 								<p class="follow-with">({service.followWith})</p>
@@ -242,8 +242,8 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 					text-decoration: none;
 					color: var(--foreground);
 					@include underline-hover(var(--accent-3));
-					h3,
-					h4 {
+					h2,
+					h3 {
 						margin: 0;
 						font-size: var(--text-xl);
 					}
@@ -254,7 +254,7 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 					height: 2.5rem;
 					border-radius: var(--curve-sm);
 					overflow: hidden;
-					color: var(--accent);
+					color: var(--accent-text);
 				}
 				.follow-with {
 					opacity: var(--opacity-soft);
@@ -299,7 +299,7 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 						right: var(--space-md);
 						font-size: var(--text-sm);
 						background: var(--accent-3);
-						color: var(--accent-fg);
+						color: var(--accent-3-fg);
 						text-decoration: none;
 						border-radius: var(--curve-md);
 					}
@@ -327,9 +327,9 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 						display: flex;
 						gap: var(--space-xs);
 						&:hover {
-							color: var(--accent-3);
+							color: var(--accent-3-text);
 							:global(svg) {
-								color: var(--accent-3);
+								color: var(--accent-3-text);
 							}
 						}
 					}

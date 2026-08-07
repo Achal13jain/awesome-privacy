@@ -85,7 +85,7 @@
   }
 
   .nothing-yet {
-    background: var(--accent-fg);
+    background: var(--surface);
     border: var(--border-heavy);
     border-radius: var(--curve-sm);
     box-shadow: var(--shadow-md);

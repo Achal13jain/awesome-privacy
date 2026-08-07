@@ -13,7 +13,7 @@ const { redditData } = Astro.props;
 	<div class="left">
 		<h3>Reddit</h3>
 		<p class="website-title">
-			<img src={redditData.info.icon} alt="" width="16" />
+			<img src={redditData.info.icon} alt="" width="16" loading="lazy" />
 			{redditData.info.title || redditData.info.name}
 		</p>
 		<p class="website-description">{redditData.info.description}</p>
@@ -23,8 +23,7 @@ const { redditData } = Astro.props;
 					class="banner"
 					width="300"
 					src={redditData.info.banner}
-					alt="Banner"
-				/>
+					alt="Banner" loading="lazy" />
 			)
 		}
 		<ul class="list-table">

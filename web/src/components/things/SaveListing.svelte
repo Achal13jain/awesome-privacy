@@ -93,7 +93,7 @@
     }
     &:hover {
       :global(svg) {
-        color: var(--accent-3);
+        color: var(--accent-3-text);
         opacity: 1;
       }
     }

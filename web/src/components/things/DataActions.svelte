@@ -186,7 +186,7 @@
     background: var(--accent-3);
     border: var(--border-light);
     box-shadow: var(--shadow-sm);
-    color: var(--accent-fg);
+    color: var(--accent-3-fg);
     text-decoration: none;
     border-radius: var(--curve-pill);
     padding: var(--space-sm) var(--space-md);
@@ -213,7 +213,7 @@
       flex-wrap: wrap;
       padding: 0.3rem 0;
       font-size: 0.95rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid var(--surface-line);
       &:last-child {
         border-bottom: none;
       }
@@ -253,7 +253,7 @@
     a {
       color: var(--foreground);
       &:hover {
-        color: var(--accent);
+        color: var(--accent-text);
       }
     }
   }
@@ -262,7 +262,7 @@
     padding: 0.05rem 0.3rem;
     border-radius: var(--curve-sm);
     background: var(--accent-3);
-    color: var(--accent-fg);
+    color: var(--accent-3-fg);
     text-decoration: none;
     font-family: var(--font-subtitle);
     &:hover {

@@ -132,7 +132,7 @@ const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubD
   <div class="left">
     <h4>Author</h4>
     <p>
-      <img src={gitHubData.info.ownerAvatar} alt="" width="20" height="20" />
+      <img src={gitHubData.info.ownerAvatar} alt="" width="20" height="20" loading="lazy" />
       <a target="_blank" href={`https://github.com/${gitHubData.info.ownerUsername}`}>
         {gitHubData.info.ownerUsername}
       </a>
@@ -175,9 +175,9 @@ const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubD
   </div>
   <div class="right">
     <h4>Language Usage</h4>
-    <img class="languages-img" width="600" src={languageChart} alt="Language Usage" />
+    <img class="languages-img" width="600" src={languageChart} alt="Language Usage" loading="lazy" />
     <h4>Star History</h4>
-    <img class="languages-img" width="600" src={`https://api.star-history.com/svg?repos=${repo}&type=Date`} alt="Star History" />
+    <img class="languages-img" width="600" src={`https://api.star-history.com/svg?repos=${repo}&type=Date`} alt="Star History" loading="lazy" />
   </div>
   <div class="long-list-data">
     <div class="left list-wrap">
@@ -185,7 +185,7 @@ const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubD
       <ul>
         {gitHubData.contributors.map((contributor) => (
           <li>
-            <img src={contributor.avatar} alt="" width="20" height="20" />
+            <img src={contributor.avatar} alt="" width="20" height="20" loading="lazy" />
             <a href={`https://github.com/${contributor.username}`} target="_blank">
               @{contributor.username}
               </a> ({contributor.contributions})
@@ -198,7 +198,7 @@ const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubD
       <ul>
         {gitHubData.commits.map((commit) => (
           <li>
-            <img src={commit.authorAvatar} alt="" width="20" height="20" />
+            <img src={commit.authorAvatar} alt="" width="20" height="20" loading="lazy" />
             <a href={`https://github.com/${commit.authorUsername}`} target="_blank">
               {commit.authorName}
             </a>

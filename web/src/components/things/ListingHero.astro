@@ -228,7 +228,7 @@ const highlights = [
 		position: relative;
 		border: var(--border-heavy);
 		box-shadow: var(--shadow-lg);
-		background: var(--accent-fg);
+		background: var(--surface);
 	}
 
 	.service-head {
@@ -339,7 +339,7 @@ const highlights = [
 						color: var(--foreground);
 						text-decoration: none;
 						&:hover {
-							color: var(--accent);
+							color: var(--accent-text);
 						}
 					}
 					span {
@@ -360,7 +360,6 @@ const highlights = [
 			display: flex;
 			align-items: center;
 			gap: var(--space-xs);
-			opacity: var(--opacity-muted);
 			font-size: var(--text-sm);
 			padding: var(--space-sm) 0;
 			:global(svg) {

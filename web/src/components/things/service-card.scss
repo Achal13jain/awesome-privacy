@@ -6,7 +6,7 @@
   padding: var(--space-md);
   border: var(--border-heavy);
   box-shadow: var(--shadow-lg);
-  background: var(--accent-fg);
+  background: var(--surface);
   border-radius: var(--curve-sm);
   position: relative;
   overflow: hidden;
@@ -54,12 +54,11 @@
     gap: var(--space-sm);
     justify-content: space-between;
     a {
-      color: var(--accent-3);
+      color: var(--accent-3-text);
       font-size: var(--text-sm);
       display: inline-flex;
       align-items: center;
       gap: var(--space-xs);
-      opacity: var(--opacity-subtle);
       text-decoration: none;
       max-width: 50%;
       min-width: 25%;
@@ -68,7 +67,6 @@
       }
       &:hover {
         text-decoration: underline;
-        opacity: 1;
       }
       :global(svg) {
         width: 1rem;
