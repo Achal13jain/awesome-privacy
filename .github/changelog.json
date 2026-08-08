@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T07:57:45Z",
+  "generatedAt": "2026-08-08T20:50:41Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -76,6 +76,7 @@
     "575cf351328e99ed153241489782f1b231bdb896",
     "5849c7a4ff23b3687ea588d0610bf1b2905d16a2",
     "5b772f3ea6f2e480b07bb09a1b523553198fd386",
+    "5b892ebb41adcc78a27924732899524cf0f4bdbd",
     "5c1ee30d998b77d329f90237032fb5df492a24b1",
     "5ec99fe78361e422648aec2eff69375fcc3ca810",
     "5f84c75e9a52780eca896e9cbce656698412a372",
@@ -389,9 +390,35 @@
     731,
     732,
     733,
-    735
+    735,
+    737,
+    739,
+    740
   ],
   "entries": [
+    {
+      "date": "2026-08-08",
+      "sha": "5b892ebb41adcc78a27924732899524cf0f4bdbd",
+      "pr": {
+        "number": 738,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/738",
+        "author": "lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "removed": [
+            {
+              "name": "Qwant",
+              "category": "Essentials",
+              "section": "Search Engines"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-04",
       "sha": "76d2c5dbf503ee8fd558fe5f0f65053d8337120e",
@@ -6817,6 +6844,36 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-08",
+      "title": "Adds MindMapVault to Digital Notes",
+      "pr": {
+        "number": 740,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/740",
+        "author": "kornelko2",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/17098815?v=4"
+      }
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Adds No Bloat PDF to Metadata Removal",
+      "pr": {
+        "number": 739,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/739",
+        "author": "bgalvan1277",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/129000278?v=4"
+      }
+    },
+    {
+      "date": "2026-08-04",
+      "title": "Adds ShrinkPDF to File Converters",
+      "pr": {
+        "number": 737,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/737",
+        "author": "tanyeewee11-blip",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/283060589?v=4"
+      }
+    },
     {
       "date": "2026-08-04",
       "title": "Adds norito Remove Metadata to Online Tools",
