@@ -30,8 +30,15 @@
   });
   let searchQuery = $state('');
 
+  const MAX_VISIBLE_CHANGES = 8;
+  let expanded: Record<string, boolean> = $state({});
+
   function toggle(key: Filter) {
     on = { ...on, [key]: !on[key] };
+  }
+
+  function toggleExpanded(sha: string) {
+    expanded = { ...expanded, [sha]: !expanded[sha] };
   }
 
   type TimelineItem =
@@ -312,7 +319,8 @@
   <div class="controls-body">
     <input
       class="search"
-      type="text"
+      type="search"
+      aria-label="Filter changes by service, category or user"
       placeholder="Filter by service, category, user.."
       bind:value={searchQuery}
     />
@@ -321,6 +329,7 @@
         <button
           class="pill {f.key}"
           class:active={on[f.key]}
+          aria-pressed={on[f.key]}
           onclick={() => toggle(f.key)}
         >
           <span class="icon">{f.icon}</span>{f.label}
@@ -329,6 +338,10 @@
     </div>
   </div>
 </details>
+
+<p class="sr-only" role="status">
+  Showing {filtered.length} of {allItems.length} entries
+</p>
 
 {#if filtered.length === 0}
   <p class="empty">No matching changes found.</p>
@@ -346,6 +359,8 @@
               href={`https://github.com/${item.pr.author}`}
               target="_blank"
               rel="noreferrer"
+              aria-hidden="true"
+              tabindex="-1"
             >
               <img
                 class="avatar"
@@ -394,31 +409,54 @@
               <span class="path">Not merged</span>
             </div>
           {:else}
-            {#each changeRows(item.data) as row (`${row.cls}/${row.path}/${row.name}`)}
-              <div class="change">
-                <span class="badge {row.cls}">{row.badge}</span>
-                {#if row.href}
-                  <a
-                    class="svc-name"
-                    class:removed={row.cls === 'rem'}
-                    href={row.href}>{row.name}</a
-                  >
-                {:else}
-                  <strong>{row.name}</strong>
-                {/if}
-                {#if row.fields}<span class="fields"
-                    >updated {row.fields.join(', ')}</span
-                  >{/if}
-                {#if row.path && !row.fields}<span class="path">{row.path}</span
-                  >{/if}
-              </div>
+            {@const rows = changeRows(item.data)}
+            {@const overflow = rows.length - MAX_VISIBLE_CHANGES}
+            {@const isOpen = !!expanded[item.sha]}
+            {#each rows.slice(0, MAX_VISIBLE_CHANGES) as row, i (i)}
+              {@render change(row)}
             {/each}
+            {#if overflow > 0}
+              <div
+                class="extra"
+                class:open={isOpen}
+                id={`changes-${item.sha}`}
+                inert={!isOpen}
+              >
+                <div>
+                  {#each rows.slice(MAX_VISIBLE_CHANGES) as row, i (i)}
+                    {@render change(row)}
+                  {/each}
+                </div>
+              </div>
+              <button
+                class="show-more"
+                aria-expanded={isOpen}
+                aria-controls={`changes-${item.sha}`}
+                onclick={() => toggleExpanded(item.sha)}
+              >
+                {isOpen ? 'Show less' : `+${overflow} more`}
+              </button>
+            {/if}
           {/if}
         </div>
       </div>
     </article>
   {/each}
 {/each}
+
+{#snippet change(row: ChangeRow)}
+  <div class="change">
+    <span class="badge {row.cls}">{row.badge}</span>
+    {#if row.href}
+      <a class="svc-name" href={row.href}>{row.name}</a>
+    {:else}
+      <strong>{row.name}</strong>
+    {/if}
+    {#if row.fields}<span class="fields">updated {row.fields.join(', ')}</span
+      >{/if}
+    {#if row.path && !row.fields}<span class="path">{row.path}</span>{/if}
+  </div>
+{/snippet}
 
 <style lang="scss">
   @use '../../styles/mixins' as *;
@@ -471,6 +509,7 @@
       display: flex;
       align-items: center;
       gap: var(--space-xs);
+      min-height: 24px;
       padding: 0.15rem var(--space-sm);
       border: 1px solid transparent;
       border-radius: var(--curve-md);
@@ -601,6 +640,39 @@
       align-items: baseline;
       gap: 0.4rem;
       flex-wrap: wrap;
+    }
+  }
+
+  .extra {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: var(--transition-normal);
+    &.open {
+      grid-template-rows: 1fr;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      overflow: hidden;
+    }
+  }
+
+  .show-more {
+    align-self: flex-start;
+    min-height: 24px;
+    margin-top: 0.2rem;
+    padding: 0.1rem var(--space-sm);
+    border: 1px solid currentColor;
+    border-radius: var(--curve-md);
+    background: none;
+    color: var(--accent-3-text);
+    cursor: pointer;
+    font-family: var(--font-subtitle);
+    font-size: var(--text-xs);
+    transition: var(--transition-normal);
+    &:hover {
+      background: color-mix(in srgb, var(--accent-3) 15%, transparent);
     }
   }
 
