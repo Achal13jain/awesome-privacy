@@ -1,32 +1,30 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import Fuse from 'fuse.js';
-  import { slugify } from '@utils/fetch-data';
-  import type { Category } from '../../types/Service';
+  import { fetchCategories, slugify } from '@utils/fetch-data';
   import { formatLink } from '@utils/parse-markdown';
   import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
   import type { SearchItem } from '@utils/do-searchy-searchy';
 
   interface Props {
-    data: Category[];
     previousSearch?: string | undefined;
   }
-  const { data, previousSearch = undefined }: Props = $props();
+  const { previousSearch = undefined }: Props = $props();
 
   let fuse: Fuse<SearchItem> | null = $state(null);
   let searchQuery = $state('');
 
   // Initialize Fuse.js
-  onMount(() => {
-    const items = prepareSearchItems(data);
+  onMount(async () => {
+    const items = prepareSearchItems(await fetchCategories());
     fuse = new Fuse(items, searchOptions);
   });
 
   const makeResultLink = (cat?: string, sec?: string, itm?: string) => {
     if (!cat) return '/';
-    if (!sec) return `/${slugify(cat)}`;
-    if (!itm) return `/${slugify(cat)}/${slugify(sec)}`;
-    return `/${slugify(cat)}/${slugify(sec)}/${slugify(itm)}`;
+    if (!sec) return `/${slugify(cat)}/`;
+    if (!itm) return `/${slugify(cat)}/${slugify(sec)}/`;
+    return `/${slugify(cat)}/${slugify(sec)}/${slugify(itm)}/`;
   };
 
   const makeResultText = (cat?: string, sec?: string, itm?: string) => {
@@ -71,7 +69,7 @@
       const active = results[activeIndex];
       window.location.href = active
         ? makeResultLink(active.category, active.sectionName, active.name)
-        : `/search/${encodeURIComponent(searchQuery)}`;
+        : `/search/${encodeURIComponent(searchQuery)}/`;
     }
     if (event.key === 'Escape') {
       searchQuery = '';
@@ -100,7 +98,9 @@
     aria-expanded={results.length > 0}
     aria-controls="search-results"
     aria-autocomplete="list"
-    aria-activedescendant={activeIndex >= 0 ? `search-result-${activeIndex}` : undefined}
+    aria-activedescendant={activeIndex >= 0
+      ? `search-result-${activeIndex}`
+      : undefined}
     bind:value={searchQuery}
     onkeydown={handleKeyDown}
   />

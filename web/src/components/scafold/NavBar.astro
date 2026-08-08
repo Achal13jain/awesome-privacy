@@ -3,12 +3,12 @@ import FontAwesome from '@components/form/FontAwesome.svelte';
 import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 
 const navLinks = [
-	{ label: 'View All', href: '/all' },
-	{ label: 'Search', href: '/search' },
-	{ label: 'Changelog', href: '/changelog' },
-	// { label: 'API', href: '/api' }, // TODO: restore once API is built out
-	{ label: 'Saved', href: '/inventory', id: 'saved-nav-link', hidden: true },
-	{ label: 'About', href: '/about' },
+	{ label: 'View All', href: '/all/' },
+	{ label: 'Search', href: '/search/' },
+	{ label: 'Changelog', href: '/changelog/' },
+	// { label: 'API', href: '/api/' }, // TODO: restore once API is built out
+	{ label: 'Saved', href: '/inventory/', id: 'saved-nav-link', hidden: true },
+	{ label: 'About', href: '/about/' },
 	{
 		label: 'GitHub',
 		href: 'https://github.com/lissy93/awesome-privacy',
@@ -253,5 +253,4 @@ const navLinks = [
 			}
 		}
 	}
-
 </style>

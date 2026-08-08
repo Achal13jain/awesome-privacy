@@ -67,13 +67,9 @@ const beer = putResultsIntoGroups();
 <Layout title="Search | Awesome Privacy">
 	<section>
 		<h1>Search</h1>
-		<Search client:visible data={categories} previousSearch={searchTerm} />
+		<Search client:visible previousSearch={searchTerm} />
 	</section>
-	<SmartSuggestions
-		client:visible
-		searchTerm={searchTerm || ''}
-		categories={categories}
-	/>
+	<SmartSuggestions client:visible searchTerm={searchTerm || ''} />
 	<section class="result-count">
 		<h3>Deep Search</h3>
 		<p>
@@ -84,7 +80,10 @@ const beer = putResultsIntoGroups();
 		{
 			beer.map((category) => (
 				<div class="category">
-					<a class="category-title" href={`/${slugify(category.categoryName)}`}>
+					<a
+						class="category-title"
+						href={`/${slugify(category.categoryName)}/`}
+					>
 						<h3>{category.categoryName}</h3>
 					</a>
 					<span class="section-icon">

@@ -17,6 +17,7 @@ import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
 import { codebergUrl } from '@utils/parse-markdown';
+import { plainText, truncate } from '@utils/meta-tags';
 import { fetchChangelog } from '@utils/fetch-changelog';
 import { fetchGitHubStats } from '@utils/fetch-repo-info';
 import { fetchSecurityReport } from '@utils/fetch-security-info';
@@ -91,16 +92,14 @@ const makeBreadcrumbs = () => {
 	];
 };
 
+const plainDescription = plainText(description);
+
 const makeDescriptionTag = () => {
-	let desc = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
-	if (parentSection.services) {
-		desc += `Compare ${parentSection.services.map((s: Service) => s.name).join(' vs ')} more apps. `;
-	}
-	if (parentSection.alternativeTo && parentSection.alternativeTo.length > 0) {
-		desc += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')}. `;
-	}
-	desc += 'All this, and many more free and awesome tools and software.';
-	return desc;
+	const summary = `${name}: ${plainDescription}`.replace(/([^.!?])$/, '$1.');
+	if (summary.length >= 120) return truncate(summary);
+	return truncate(
+		`${summary} Compare it with other private ${parentSection.name.toLowerCase()} on Awesome Privacy.`,
+	);
 };
 
 const filterServices = () => {
@@ -243,10 +242,6 @@ const makeSoftwareSchema = () => {
 		androidApp && 'Android',
 		url && 'Web',
 	].filter(Boolean);
-	const plainDescription = (description || '')
-		.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-		.replace(/[*_`~]/g, '')
-		.trim();
 	const codeRepository = github
 		? `https://github.com/${github}`
 		: codeberg
@@ -365,7 +360,7 @@ const makeSoftwareSchema = () => {
 				services={filterServices()}
 				subHeading={true}
 				noGitHubMetrics={true}
-				buttonLink={`/${catSlug}/${secSlug}`}
+				buttonLink={`/${catSlug}/${secSlug}/`}
 				categoryName={categoryName}
 				sectionName={parentSection.name}
 			/>
@@ -389,7 +384,7 @@ const makeSoftwareSchema = () => {
 			<p>
 				The REST API is free, no-auth and CORS-enabled. To learn more, view the <a
 					href={`${apiBase}/docs`}>API Docs</a
-				> or read the <a href="/about#api">API Usage Guide</a>.
+				> or read the <a href="/about/#api">API Usage Guide</a>.
 			</p>
 		</section>
 
@@ -401,7 +396,7 @@ const makeSoftwareSchema = () => {
 				Share {name} and Awesome Privacy with your network!
 				<div>
 					<SocialShare
-						url={`${site}/${catSlug}/${secSlug}/${slugify(name)} `}
+						url={`${site}/${catSlug}/${secSlug}/${slugify(name)}/`}
 						title={`Checkout ${name}! \n`}
 						description={`Compare #${name} and other privacy-respecting ${parentSection.name} at ` +
 							`Awesome-Privacy.xyz, the free and open source list of private software alternatives. ` +
@@ -414,7 +409,7 @@ const makeSoftwareSchema = () => {
 		<div class="pagination-navigation">
 			{
 				previous ? (
-					<Button url={`/${catSlug}/${secSlug}/${slugify(previous)}`}>
+					<Button url={`/${catSlug}/${secSlug}/${slugify(previous)}/`}>
 						<span>← Previous</span>
 						<p>{previous}</p>
 					</Button>
@@ -422,12 +417,12 @@ const makeSoftwareSchema = () => {
 					<p class="nothing" />
 				)
 			}
-			<a href={`/${catSlug}/${secSlug}`} class="go-to-category">
+			<a href={`/${catSlug}/${secSlug}/`} class="go-to-category">
 				View {parentSection.name} ({(parentSection.services || []).length})
 			</a>
 			{
 				next && (
-					<Button url={`/${catSlug}/${secSlug}/${slugify(next)}`}>
+					<Button url={`/${catSlug}/${secSlug}/${slugify(next)}/`}>
 						<span>Next →</span>
 						<p>{next}</p>
 					</Button>

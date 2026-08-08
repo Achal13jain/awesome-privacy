@@ -141,9 +141,9 @@ const highlights = [
 	<div class="breadcrumbs">
 		<span>
 			<a href="/">Awesome Privacy</a>
-			➔ <a href={`/${catSlug}`}>{categoryName}</a>
-			➔ <a href={`/${catSlug}/${secSlug}`}>{parentSection.name}</a>
-			➔ <a href={`/${catSlug}/${secSlug}/${slugify(name)}`}>{name}</a>
+			➔ <a href={`/${catSlug}/`}>{categoryName}</a>
+			➔ <a href={`/${catSlug}/${secSlug}/`}>{parentSection.name}</a>
+			➔ <a href={`/${catSlug}/${secSlug}/${slugify(name)}/`}>{name}</a>
 		</span>
 	</div>
 	<div class="save-listing">
@@ -197,7 +197,7 @@ const highlights = [
 							<ul>
 								{otherServices.map((s: Service) => (
 									<li>
-										<a href={`/${catSlug}/${secSlug}/${slugify(s.name)}`}>
+										<a href={`/${catSlug}/${secSlug}/${slugify(s.name)}/`}>
 											{s.name}
 										</a>
 									</li>

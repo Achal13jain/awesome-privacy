@@ -30,35 +30,35 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 				<a href="/">Home</a>
 			</li>
 			<li>
-				<a href="/search">Search</a>
+				<a href="/search/">Search</a>
 			</li>
 			<li>
-				<a href="/all">View All</a>
+				<a href="/all/">View All</a>
 			</li>
 			<li>
-				<a href="/changelog">Changelog</a>
+				<a href="/changelog/">Changelog</a>
 			</li>
 			<li>
-				<a href="/inventory">My Inventory</a>
+				<a href="/inventory/">My Inventory</a>
 			</li>
 			<li>
-				<a href="/submit">Submit Listing</a>
+				<a href="/submit/">Submit Listing</a>
 			</li>
 			<li>
-				<a href="/api">API</a>
+				<a href="/api/">API</a>
 			</li>
 			<li>
-				<a href="/browse">Categories</a>
+				<a href="/browse/">Categories</a>
 				<ul>
 					{
 						categories.map((category) => (
 							<li>
-								<a href={`/${slugify(category.name)}`}>{category.name}</a>
+								<a href={`/${slugify(category.name)}/`}>{category.name}</a>
 								<ul>
 									{category.sections.map((section) => (
 										<li>
 											<a
-												href={`/${slugify(category.name)}/${slugify(section.name)}`}
+												href={`/${slugify(category.name)}/${slugify(section.name)}/`}
 											>
 												{section.name}
 											</a>
@@ -66,7 +66,7 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 												{(section.services || []).map((service) => (
 													<li title={service.description || ''}>
 														<a
-															href={`/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`}
+															href={`/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}/`}
 														>
 															{service.name}
 														</a>
@@ -82,24 +82,24 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 				</ul>
 			</li>
 			<li>
-				<a href="/about">About</a>
+				<a href="/about/">About</a>
 				<ul>
-					<li><a href="/about#objective">Objective</a></li>
-					<li><a href="/about#criteria">Listing Criteria</a></li>
-					<li><a href="/about#contributing">Contributing</a></li>
+					<li><a href="/about/#objective">Objective</a></li>
+					<li><a href="/about/#criteria">Listing Criteria</a></li>
+					<li><a href="/about/#contributing">Contributing</a></li>
 					<li>
-						<a href="/about#acknowledgements">Acknowledgements</a>
+						<a href="/about/#acknowledgements">Acknowledgements</a>
 						<ul>
-							<li><a href="/about#contributors">Contributors</a></li>
-							<li><a href="/about#sponsors">Sponsors</a></li>
+							<li><a href="/about/#contributors">Contributors</a></li>
+							<li><a href="/about/#sponsors">Sponsors</a></li>
 						</ul>
 					</li>
-					<li><a href="/about#author">Author</a></li>
-					<li><a href="/about#license">License</a></li>
+					<li><a href="/about/#author">Author</a></li>
+					<li><a href="/about/#license">License</a></li>
 				</ul>
 			</li>
 			<li>
-				<a href="/sitemap">Sitemap</a>
+				<a href="/sitemap/">Sitemap</a>
 			</li>
 		</ul>
 	</main>
@@ -130,7 +130,7 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 				case 'Enter':
 					event.preventDefault();
 					const searchTerm = encodeURIComponent(filterInput.value);
-					window.location.href = `/search/${searchTerm}`;
+					window.location.href = `/search/${searchTerm}/`;
 					break;
 				case 'Escape':
 					filterInput.value = '';

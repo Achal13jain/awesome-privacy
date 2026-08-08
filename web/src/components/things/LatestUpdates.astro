@@ -59,7 +59,7 @@ const formatDate = (iso: string) =>
 						<li>
 							<a
 								class="service-link"
-								href={`/${slugify(a.category)}/${slugify(a.section)}/${slugify(a.name)}`}
+								href={`/${slugify(a.category)}/${slugify(a.section)}/${slugify(a.name)}/`}
 							>
 								{a.service && (
 									<ServiceIcon
@@ -76,7 +76,7 @@ const formatDate = (iso: string) =>
 								title={`In ${a.category}${a.author ? ` submitted by @${a.author}` : ''} on ${formatDate(a.date)}`}
 							>
 								In{' '}
-								<a class="inline" href={`/${slugify(a.category)}`}>
+								<a class="inline" href={`/${slugify(a.category)}/`}>
 									{a.category}
 								</a>
 								{a.author && (
@@ -99,7 +99,7 @@ const formatDate = (iso: string) =>
 					))}
 				</ul>
 				<div class="footer">
-					<a class="small-button" href="/changelog">
+					<a class="small-button" href="/changelog/">
 						View full changelog &rarr;
 					</a>
 				</div>

@@ -12,22 +12,19 @@ import type { Category } from 'src/types/Service';
 const categories = (await fetchData())?.categories || ([] as Category[]);
 
 const description =
-	'Privacy is a fundamental human right; ' +
-	"without it, we're just open books in a world where everyone's " +
-	"watching. Let's take control back.\n" +
-	'Migrating open-source applications which do not collect, sell or log your data is a great first step.' +
-	'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
+	'Find privacy-respecting alternatives to the apps and services you use every day. ' +
+	'A curated directory of open source, secure and ad-free software.';
 ---
 
-<Layout title="Home | Awesome Privacy" description={description}>
+<Layout description={description}>
 	<Hero />
 	<main>
 		<div class="action-card">
-			<Search client:visible data={categories} />
+			<Search client:visible />
 			<span class="action-divider">or</span>
-			<a href="/all" class="browse-cta"> Browse All Listings &rarr; </a>
+			<a href="/all/" class="browse-cta"> Browse All Listings &rarr; </a>
 		</div>
-		<h2 class="browse-title"><a href="/all">Categories</a></h2>
+		<h2 class="browse-title"><a href="/all/">Categories</a></h2>
 		<ul class="categories">
 			{
 				categories.map((category) => (
@@ -38,17 +35,17 @@ const description =
 			}
 		</ul>
 		<div class="categories-footer">
-			<a class="small-button" href="/all">View everything &rarr;</a>
+			<a class="small-button" href="/all/">View everything &rarr;</a>
 		</div>
 
-		<h2><a href="/changelog">Latest Updates</a></h2>
+		<h2><a href="/changelog/">Latest Updates</a></h2>
 		<LatestUpdates categories={categories} />
 
-		<h2><a href="/inventory">Saved Items</a></h2>
-		<SavedServices allData={categories} client:load />
+		<h2><a href="/inventory/">Saved Items</a></h2>
+		<SavedServices client:load />
 
 		<h2>
-			<a href="/about">About</a>
+			<a href="/about/">About</a>
 		</h2>
 		<div class="about-summary">
 			<p>
@@ -75,7 +72,7 @@ const description =
 				> on GitHub.
 			</p>
 			<div class="about-footer">
-				<a class="small-button" href="/about">Keep reading &rarr;</a>
+				<a class="small-button" href="/about/">Keep reading &rarr;</a>
 			</div>
 		</div>
 	</main>

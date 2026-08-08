@@ -62,7 +62,7 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 
 							<a
 								class="service-title"
-								href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}
+								href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}/`}
 							>
 								{subHeading ? <h3>{service.name}</h3> : <h2>{service.name}</h2>}
 							</a>
@@ -160,7 +160,7 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 								</div>
 								<div class="view-service">
 									<a
-										href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}
+										href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}/`}
 									>
 										View {service.name} Report
 									</a>
@@ -180,7 +180,7 @@ const sortedServices = [...(services || [])].sort((a, b) =>
 				GitHub.
 				<br />
 				<span class="quick-submit">
-					Or submit an entry <a href="/submit">here</a>
+					Or submit an entry <a href="/submit/">here</a>
 				</span>
 			</p>
 		)

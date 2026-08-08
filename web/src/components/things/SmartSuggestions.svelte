@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import type { Category, Service } from '../../types/Service';
+  import type { Service } from '../../types/Service';
   import { formatLink } from '@utils/parse-markdown';
-  import { slugify } from '@utils/fetch-data';
+  import { fetchCategories, slugify } from '@utils/fetch-data';
   import { apiBase } from '@utils/api-config';
 
   interface ServiceResult extends Service {
@@ -10,10 +10,9 @@
   }
 
   interface Props {
-    categories: Category[];
     searchTerm: string;
   }
-  const { categories, searchTerm }: Props = $props();
+  const { searchTerm }: Props = $props();
 
   let results: ServiceResult[] = $state([]);
 
@@ -29,11 +28,12 @@
       );
 
     const tmpResults: ServiceResult[] = [];
+    const categories = await fetchCategories();
     categories.forEach((category) => {
       (category.sections || []).forEach((section) => {
         (section.services || []).forEach((service) => {
           if (fetchedServices.includes(normalize(service.name))) {
-            const path = `/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`;
+            const path = `/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}/`;
             tmpResults.push({ ...service, path });
             return;
           }

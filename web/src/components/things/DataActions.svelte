@@ -118,7 +118,7 @@
     />
     Note that some of the information shown above has been aggregated from external
     sources, a list of these can be found
-    <a href="/about#our-data">data documentation</a>.
+    <a href="/about/#our-data">data documentation</a>.
   </p>
 
   <h4>Origin Data</h4>
@@ -157,7 +157,7 @@
     >
       <FontAwesome iconName="edit" /> Submit Edit to {serviceName}
     </a>
-    <a class="button-link" href="/submit">
+    <a class="button-link" href="/submit/">
       <FontAwesome iconName="add" /> Add alternative
     </a>
   </div>

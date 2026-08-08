@@ -59,7 +59,7 @@
 
   {#if showLabel && isSaved}
     <div class="done-msg">
-      You can view all saved items in your <a href="/inventory">Inventory</a>
+      You can view all saved items in your <a href="/inventory/">Inventory</a>
     </div>
   {/if}
 </div>

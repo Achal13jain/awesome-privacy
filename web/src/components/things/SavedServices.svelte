@@ -1,15 +1,14 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  import type { Category, Service } from '../../types/Service';
-  import { slugify } from '@utils/fetch-data';
+  import type { Service } from '../../types/Service';
+  import { fetchCategories, slugify } from '@utils/fetch-data';
   import ServiceCard from './ServiceCard.svelte';
 
   interface Props {
-    allData: Category[];
     serviceList?: string[] | null;
   }
-  const { allData, serviceList = null }: Props = $props();
+  const { serviceList = null }: Props = $props();
 
   interface SavedServices {
     category: string;
@@ -20,9 +19,12 @@
   let savedServices: SavedServices[] = $state([]);
 
   onMount(async () => {
-    const results: SavedServices[] = [];
     const saved =
       serviceList || JSON.parse(localStorage.getItem('savedServices') || '[]');
+    if (!saved.length) return;
+
+    const results: SavedServices[] = [];
+    const allData = await fetchCategories();
     saved.forEach((serviceId: string) => {
       const parts = serviceId.split('/');
       const categoryName = parts[0];
@@ -70,7 +72,7 @@
       </small>
       <p class="nope">Nothing saved yet!</p>
       <div class="footer">
-        <a class="small-button" href="/all">Browse all entries &rarr;</a>
+        <a class="small-button" href="/all/">Browse all entries &rarr;</a>
       </div>
     </div>
   {/if}

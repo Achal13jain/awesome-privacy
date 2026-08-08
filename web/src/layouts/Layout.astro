@@ -27,6 +27,15 @@ const {
 	customSchemaJson,
 } = Astro.props;
 
+// Crumbs arrive as '/', 'api' or 'category/section', so normalise to a canonical URL
+const crumbUrl = (item: string) => {
+	const path = item.replace(/^\/+|\/+$/g, '');
+	return `https://awesome-privacy.xyz/${path && `${path}/`}`;
+};
+
+// Always advertise the trailing-slash form, so server-rendered routes agree with the sitemap
+const canonical = crumbUrl(Astro.url.pathname);
+
 const makeBreadcrumbs = () => {
 	if (!breadcrumbs) return null;
 	return {
@@ -36,7 +45,7 @@ const makeBreadcrumbs = () => {
 			'@type': 'ListItem',
 			position: index + 1,
 			name: breadcrumb.name,
-			item: `https://awesome-privacy.xyz/${breadcrumb.item}`,
+			item: crumbUrl(breadcrumb.item),
 		})),
 	};
 };
@@ -52,7 +61,7 @@ const makeSearchLd = () => {
 				target: {
 					'@type': 'EntryPoint',
 					urlTemplate:
-						'https://awesome-privacy.xyz/search?q={search_term_string}',
+						'https://awesome-privacy.xyz/search/{search_term_string}/',
 				},
 				'query-input': 'required name=search_term_string',
 			},
@@ -67,7 +76,9 @@ const makeSearchLd = () => {
 		<script is:inline>
 			const setTheme = () => {
 				const stored = localStorage.getItem('theme');
-				const prefersLight = matchMedia('(prefers-color-scheme: light)').matches;
+				const prefersLight = matchMedia(
+					'(prefers-color-scheme: light)',
+				).matches;
 				document.documentElement.dataset.theme =
 					stored || (prefersLight ? 'light' : 'dark');
 			};
@@ -90,10 +101,7 @@ const makeSearchLd = () => {
 			content={`Built by an actual human, in Astro. ${Astro.generator}`}
 		/>
 		<meta name="robots" content="index, follow" />
-		<link
-			rel="canonical"
-			href={`https://awesome-privacy.xyz${Astro.url.pathname}`}
-		/>
+		<link rel="canonical" href={canonical} />
 		<link
 			rel="alternate"
 			type="application/rss+xml"
@@ -125,10 +133,7 @@ const makeSearchLd = () => {
 		<!-- Social media meta tags (Open Graphh + Twitter) -->
 		<meta property="og:site_name" content="Awesome Privacy" />
 		<meta property="og:type" content="website" />
-		<meta
-			property="og:url"
-			content={`https://awesome-privacy.xyz${Astro.url.pathname}`}
-		/>
+		<meta property="og:url" content={canonical} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta
@@ -252,8 +257,8 @@ const makeSearchLd = () => {
 		::after {
 			animation-duration: 0.01ms !important;
 			animation-iteration-count: 1 !important;
-			transition-property: color, background-color, border-color, box-shadow,
-				opacity !important;
+			transition-property:
+				color, background-color, border-color, box-shadow, opacity !important;
 		}
 	}
 

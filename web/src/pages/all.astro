@@ -49,13 +49,13 @@ const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
 				<Fragment>
 				<h2 id={slugify(category.name)}>
 					<FontAwesome iconName={slugify(category.name)} />
-					<a href={`/${slugify(category.name)}`}>{category.name}</a>
+					<a href={`/${slugify(category.name)}/`}>{category.name}</a>
 				</h2>
 				<article>
 					{category.sections.map((section: Section) => (
 						<Fragment>
 							<h3 id={`${slugify(category.name)}-${slugify(section.name)}`}>
-								<a href={`/${slugify(category.name)}/${slugify(section.name)}`}>
+								<a href={`/${slugify(category.name)}/${slugify(section.name)}/`}>
 									{section.name}
 								</a>
 							</h3>
@@ -74,7 +74,7 @@ const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
 										<strong>This section is still a work in progress</strong><br />
 										Check back soon, or help us complete it by submitting a
 										<a href="https://github.com/lissy93/awesome-privacy">pull request</a>
-										or <a href="/submit">entry</a>.
+										or <a href="/submit/">entry</a>.
 									</p>
 								</div>
 							)}

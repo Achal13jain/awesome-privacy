@@ -117,7 +117,7 @@
 
 <p>
   Before completing this form, you must ensure that the service you are adding
-  aligns with the <a href="/about#creteria">Requirements</a> for Awesome
+  aligns with the <a href="/about/#creteria">Requirements</a> for Awesome
   Privacy.
   <br />
   You'll need a GitHub account in order to submit this form.
@@ -174,7 +174,7 @@
       </select>
       <p>
         Choose the top-level category, which should align with the <a
-          href="/browse">one of these</a
+          href="/browse/">one of these</a
         >.
       </p>
     </div>

@@ -2,11 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import SavedServices from '@components/things/SavedServices.svelte';
 
-import { fetchData } from '@utils/fetch-data';
 import Button from '@components/form/Button.astro';
-import type { Category } from '../../types/Service';
-
-const categories = (await fetchData())?.categories || ([] as Category[]);
 
 export const prerender = false;
 
@@ -50,10 +46,10 @@ if (serviceList.error) {
 				</div>
 			)
 		}
-		<SavedServices allData={categories} serviceList={serviceList} client:load />
+		<SavedServices serviceList={serviceList} client:load />
 		<div class="buttons">
 			<p>Not found what you're looking for?</p>
-			<Button url="/all">Browse Services</Button>
+			<Button url="/all/">Browse Services</Button>
 		</div>
 	</main>
 </Layout>

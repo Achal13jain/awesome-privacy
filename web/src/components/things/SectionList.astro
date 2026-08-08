@@ -23,7 +23,7 @@ const Heading = `h${headingLevel}` as 'h2' | 'h3';
 				{title}{' '}
 			</h1>
 		) : (
-			<a class="category-title" href={`/${slugify(title)}`}>
+			<a class="category-title" href={`/${slugify(title)}/`}>
 				<Heading>{title}</Heading>
 			</a>
 		)
@@ -41,7 +41,7 @@ const Heading = `h${headingLevel}` as 'h2' | 'h3';
 		{
 			sections.map((section) => (
 				<li class="section">
-					<a href={`/${slugify(title)}/${slugify(section.name)}`}>
+					<a href={`/${slugify(title)}/${slugify(section.name)}/`}>
 						<span>{section.name}</span>
 						<span class="service-count">
 							({section.services ? section.services.length : 0})

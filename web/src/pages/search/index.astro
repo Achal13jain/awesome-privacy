@@ -1,19 +1,16 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import { fetchData } from '@utils/fetch-data';
 
 import Search from '@components/things/Search.svelte';
-
-const categories = (await fetchData())?.categories;
 ---
 
 <Layout title="Search | Awesome Privacy">
 	<section>
 		<h1>Search</h1>
-		<Search client:visible data={categories} />
+		<Search client:visible />
 		<p class="sitemap-link">
-			Browse <a href="/all">all listings</a>, or see all pages in the <a
-				href="/sitemap">Sitemap</a
+			Browse <a href="/all/">all listings</a>, or see all pages in the <a
+				href="/sitemap/">Sitemap</a
 			>
 		</p>
 	</section>

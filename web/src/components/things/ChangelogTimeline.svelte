@@ -160,7 +160,7 @@
   function serviceLink(s: ServiceChange, isRemoval: boolean): string {
     const c = slugify(s.category),
       sc = slugify(s.section);
-    return isRemoval ? `/${c}/${sc}` : `/${c}/${sc}/${slugify(s.name)}`;
+    return isRemoval ? `/${c}/${sc}/` : `/${c}/${sc}/${slugify(s.name)}/`;
   }
 
   type ChangeRow = {
@@ -229,7 +229,7 @@
         badge: 'New Section',
         cls: 'add',
         name: v.name,
-        href: `/${slugify(v.category)}/${slugify(v.name)}`,
+        href: `/${slugify(v.category)}/${slugify(v.name)}/`,
       })),
       ...sc.removed.map((v) => ({
         badge: 'Section Removed',
@@ -241,7 +241,7 @@
         badge: 'Section Renamed',
         cls: 'mod',
         name: `${v.from.section} → ${v.to.section}`,
-        href: `/${slugify(v.to.category)}/${slugify(v.to.section)}`,
+        href: `/${slugify(v.to.category)}/${slugify(v.to.section)}/`,
         path:
           v.from.category === v.to.category
             ? `in ${v.to.category}`

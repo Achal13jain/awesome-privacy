@@ -40,18 +40,16 @@ const makeCarasolData = () => {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
-		itemListElement: [
-			sections.map((section, index) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				url: `https://awesome-privacy.xyz/${slugify(title)}/${slugify(section.name)}`,
-				item: {
-					'@type': 'Service',
-					name: section.name,
-					url: `https://awesome-privacy.xyz/${slugify(title)}/${slugify(section.name)}`,
-				},
-			})),
-		],
+		itemListElement: sections.map((section, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			url: `https://awesome-privacy.xyz/${slugify(title)}/${slugify(section.name)}/`,
+			item: {
+				'@type': 'Service',
+				name: section.name,
+				url: `https://awesome-privacy.xyz/${slugify(title)}/${slugify(section.name)}/`,
+			},
+		})),
 	};
 };
 
@@ -82,15 +80,15 @@ const { previous, next } = makePaginationLinks();
 		<div class="breadcrumbs">
 			<span>
 				<a href="/">Awesome Privacy</a>
-				➔ <a href={`/${slugify(title)}`}>{title}</a>
+				➔ <a href={`/${slugify(title)}/`}>{title}</a>
 			</span>
 		</div>
 		<SectionList title={title} sections={sections} bigTitle={true} />
-		Or, <a href={`/all#${slugify(title)}`}>Browse All {title}</a>
+		Or, <a href={`/all/#${slugify(title)}`}>Browse All {title}</a>
 		<div class="pagination-navigation">
 			{
 				previous ? (
-					<Button url={`/${slugify(previous)}`}>
+					<Button url={`/${slugify(previous)}/`}>
 						<span>← Previous</span>
 						<p>{previous}</p>
 					</Button>
@@ -100,7 +98,7 @@ const { previous, next } = makePaginationLinks();
 			}
 			{
 				next && (
-					<Button url={`/${slugify(next)}`}>
+					<Button url={`/${slugify(next)}/`}>
 						<span>Next →</span>
 						<p>{next}</p>
 					</Button>
