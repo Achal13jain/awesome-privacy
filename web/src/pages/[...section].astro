@@ -80,6 +80,7 @@ const makeDescriptionTag = () => {
 };
 
 const makeCarasolData = () => {
+  if (!services.length) return undefined;
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",

@@ -6,7 +6,10 @@ import { fetchData, slugify } from '@utils/fetch-data';
 const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 ---
 
-<Layout title="All Links | Awesome Privacy">
+<Layout
+	title="All Links | Awesome Privacy"
+	description="A full index of every page on Awesome Privacy, covering all categories, sections and individual service listings."
+>
 	<main>
 		<h1>Sitemap</h1>
 		<p>

@@ -156,7 +156,7 @@ const highlights = [
 		/>
 	</div>
 	<div class="intro">
-		<ServiceIcon name={name} url={url} icon={icon} size={60} />
+		<ServiceIcon name={name} url={url} icon={icon} size={60} eager />
 		<div>
 			<p class="description" set:html={parseMarkdown(description)} />
 			<ul>
@@ -175,9 +175,9 @@ const highlights = [
 				{
 					(parentSection.alternativeTo || []).length > 0 && (
 						<div class="related-group">
-							<h4 class="avoid">
+							<h2 class="avoid">
 								<FontAwesome iconName="faceBad" /> Avoid
-							</h4>
+							</h2>
 							<ul>
 								{(parentSection.alternativeTo || []).map((alt: string) => (
 									<li>
@@ -191,9 +191,9 @@ const highlights = [
 				{
 					otherServices.length > 0 && (
 						<div class="related-group">
-							<h4 class="consider">
+							<h2 class="consider">
 								<FontAwesome iconName="faceGood" /> Also Consider
-							</h4>
+							</h2>
 							<ul>
 								{otherServices.map((s: Service) => (
 									<li>
@@ -303,7 +303,7 @@ const highlights = [
 		flex-wrap: wrap;
 		margin: var(--space-md) 0;
 		.related-group {
-			h4 {
+			h2 {
 				font-size: var(--text-sm);
 				font-family: var(--font-subtitle);
 				text-transform: uppercase;

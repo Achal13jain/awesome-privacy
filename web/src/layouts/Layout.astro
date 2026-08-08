@@ -54,6 +54,7 @@ const makeSearchLd = () => {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'WebSite',
+		name: 'Awesome Privacy',
 		url: 'https://awesome-privacy.xyz/',
 		potentialAction: [
 			{
@@ -141,7 +142,7 @@ const makeSearchLd = () => {
 			content="https://awesome-privacy.xyz/banner.png"
 		/>
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content="https://awesome-privacy.xyz" />
+		<meta name="twitter:url" content={canonical} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta

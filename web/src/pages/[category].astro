@@ -4,6 +4,7 @@ import SectionList from '@components/things/SectionList.astro';
 import Main from '@components/scafold/MainCard.astro';
 
 import { fetchData, slugify } from '@utils/fetch-data';
+import { truncate } from '@utils/meta-tags';
 
 import type { Section } from '../types/Service';
 import Button from '@components/form/Button.astro';
@@ -43,12 +44,8 @@ const makeCarasolData = () => {
 		itemListElement: sections.map((section, index) => ({
 			'@type': 'ListItem',
 			position: index + 1,
+			name: section.name,
 			url: `https://awesome-privacy.xyz/${slugify(title)}/${slugify(section.name)}/`,
-			item: {
-				'@type': 'Service',
-				name: section.name,
-				url: `https://awesome-privacy.xyz/${slugify(title)}/${slugify(section.name)}/`,
-			},
 		})),
 	};
 };
@@ -59,6 +56,13 @@ const makeBreadcrumbs = () => {
 		{ name: title, item: slugify(title) },
 	];
 };
+
+const makeDescriptionTag = () =>
+	truncate(
+		`Privacy-respecting ${title.toLowerCase()}: ` +
+			`${sections.map((section) => section.name).join(', ')}. ` +
+			`Compare free, open source and secure alternatives.`,
+	);
 
 const makePaginationLinks = () => {
 	const index = categories.findIndex((category) => category.name === title);
@@ -73,6 +77,7 @@ const { previous, next } = makePaginationLinks();
 
 <Layout
 	title={`${title} | Awesome Privacy`}
+	description={makeDescriptionTag()}
 	breadcrumbs={makeBreadcrumbs()}
 	customSchemaJson={makeCarasolData()}
 >
