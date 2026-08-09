@@ -14,11 +14,13 @@
   const apYaml =
     'https://github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml';
 
-  const yamlContent = source?.yaml ?? '';
-  const lineNumbers = source?.lineNumbers;
-  const editLink = lineNumbers
-    ? `${apYaml}#L${lineNumbers.start}-L${lineNumbers.end}`
-    : apYaml;
+  const yamlContent = $derived(source?.yaml ?? '');
+  const lineNumbers = $derived(source?.lineNumbers);
+  const editLink = $derived(
+    lineNumbers
+      ? `${apYaml}#L${lineNumbers.start}-L${lineNumbers.end}`
+      : apYaml,
+  );
 </script>
 
 <div class="actions">

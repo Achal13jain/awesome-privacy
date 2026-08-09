@@ -138,7 +138,13 @@ const licenseContent = async () => {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<img src={sponsor.avatarUrl} alt={sponsor.login || ""} width="80" height="80" loading="lazy" />
+								<img
+									src={sponsor.avatarUrl}
+									alt={sponsor.login || ''}
+									width="80"
+									height="80"
+									loading="lazy"
+								/>
 								<p>{sponsor.name || sponsor.login}</p>
 							</a>
 						))}
@@ -147,7 +153,9 @@ const licenseContent = async () => {
 					<img
 						class="fallback-img"
 						src="https://readme-contribs.as93.net/sponsors/lissy93?perRow=12&shape=squircle&textColor=ffffff&limit=96"
-						alt="Sponsors" loading="lazy" />
+						alt="Sponsors"
+						loading="lazy"
+					/>
 				)
 			}
 
@@ -167,7 +175,13 @@ const licenseContent = async () => {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<img src={contributor.avatar_url} alt={contributor.login || ""} width="80" height="80" loading="lazy" />
+								<img
+									src={contributor.avatar_url}
+									alt={contributor.login || ''}
+									width="80"
+									height="80"
+									loading="lazy"
+								/>
 								<p>{contributor.login}</p>
 							</a>
 						))}
@@ -176,7 +190,9 @@ const licenseContent = async () => {
 					<img
 						class="fallback-img"
 						src="https://readme-contribs.as93.net/contributors/lissy93/awesome-privacy?perRow=12&shape=squircle&textColor=ffffff&limit=96"
-						alt="Contributors" loading="lazy" />
+						alt="Contributors"
+						loading="lazy"
+					/>
 				)
 			}
 
@@ -234,7 +250,9 @@ const licenseContent = async () => {
 							width="180"
 							height="240"
 							alt="Alicia Sykes"
-							src="https://cdn.as93.net/profile-pictures/dsc_0597" loading="lazy" />
+							src="https://cdn.as93.net/profile-pictures/dsc_0597"
+							loading="lazy"
+						/>
 					</a>
 					<div class="socials">
 						{
@@ -271,7 +289,9 @@ const licenseContent = async () => {
 										width="20"
 										height="20"
 										alt={project.title}
-										src={project.icon} loading="lazy" />
+										src={project.icon}
+										loading="lazy"
+									/>
 									<a href={project.link} target="_blank" rel="noreferrer">
 										{project.title}
 									</a>{' '}

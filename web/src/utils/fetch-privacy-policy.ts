@@ -1,26 +1,15 @@
-import { error } from './logger';
-import { safeFetch } from './safe-fetch';
-import { apiBase, enrichHeaders } from './api-config';
+import { fetchEnrich } from './fetch-enrich';
 
 // Wrap the flat ToS;DR v3 record in the shape the app already consumes.
 export const fetchTosdrPrivacy = async (
   serviceId: string,
 ): Promise<PrivacyPolicyResponse | null> => {
-  const endpoint = `${apiBase}/v1/enrich/privacy/${serviceId}`;
-  try {
-    const res = await safeFetch(endpoint, { headers: enrichHeaders() });
-    if (!res.ok) {
-      error(
-        'ToS;DR',
-        `HTTP ${res.status} for service ${serviceId} (${endpoint})`,
-      );
-      return null;
-    }
-    return { error: 0, message: '', parameters: await res.json() };
-  } catch (err) {
-    error('ToS;DR', `Network error for service ${serviceId}: ${err}`);
-    return null;
-  }
+  const parameters = await fetchEnrich<Params>(
+    'ToS;DR',
+    `/v1/enrich/privacy/${serviceId}`,
+    `service ${serviceId}`,
+  );
+  return parameters && { error: 0, message: '', parameters };
 };
 
 interface Document {

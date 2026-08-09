@@ -1,23 +1,11 @@
-import { error } from './logger';
-import { safeFetch } from './safe-fetch';
-import { apiBase, enrichHeaders } from './api-config';
+import { fetchEnrich } from './fetch-enrich';
 
-export const fetchWebsiteInfo = async (
-  url: string,
-): Promise<WebsiteData | null> => {
-  const endpoint = `${apiBase}/v1/enrich/website?url=${encodeURIComponent(url)}`;
-  try {
-    const res = await safeFetch(endpoint, { headers: enrichHeaders() });
-    if (!res.ok) {
-      error('Website', `HTTP ${res.status} for ${url} (${endpoint})`);
-      return null;
-    }
-    return await res.json();
-  } catch (err) {
-    error('Website', `Network error for ${url}: ${err}`);
-    return null;
-  }
-};
+export const fetchWebsiteInfo = (url: string): Promise<WebsiteData | null> =>
+  fetchEnrich<WebsiteData>(
+    'Website',
+    `/v1/enrich/website?url=${encodeURIComponent(url)}`,
+    url,
+  );
 
 interface DNSRecord {
   target: string;
