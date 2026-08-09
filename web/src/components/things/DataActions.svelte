@@ -1,13 +1,12 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import {
-    fetchSrcData,
     makeRemovalRequest,
     makeEditRequest,
   } from '@utils/data-src-delete-n-edit';
   import FontAwesome from '@components/form/FontAwesome.svelte';
 
   import type { ChangelogPr } from '../../utils/fetch-changelog';
+  import type { ServiceSource } from '@utils/fetch-line-numbers';
 
   interface HistoryItem {
     date: string;
@@ -22,16 +21,18 @@
     sectionName: string;
     serviceName: string;
     history?: HistoryItem[];
+    source?: ServiceSource;
   }
   const {
     categoryName,
     sectionName,
     serviceName,
     history = [],
+    source,
   }: Props = $props();
 
-  let lineNumbers: { start: number; end: number } | null = $state(null);
-  let yamlContent = $state('');
+  const lineNumbers = source?.lineNumbers;
+  const yamlContent = source?.yaml ?? '';
 
   const getGitHubSrcFile = () => {
     if (lineNumbers) {
@@ -49,12 +50,6 @@
       'style=felipec&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on';
     return `${host}/iframe.html?target=${target}&${opts}`;
   };
-
-  onMount(async () => {
-    const results = await fetchSrcData(categoryName, sectionName, serviceName);
-    lineNumbers = results.lineNumbers;
-    yamlContent = results.yamlContent;
-  });
 </script>
 
 {#if history.length > 0}
@@ -125,6 +120,7 @@
   <iframe
     frameborder="0"
     scrolling="no"
+    loading="lazy"
     class="yaml-embed"
     allow="clipboard-write"
     title="awesome-privacy.yml"

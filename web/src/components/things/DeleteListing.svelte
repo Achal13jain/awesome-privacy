@@ -1,36 +1,24 @@
 <script lang="ts">
   import FontAwesome from '@components/form/FontAwesome.svelte';
-  import {
-    fetchSrcData,
-    makeRemovalRequest,
-  } from '@utils/data-src-delete-n-edit';
-  import { onMount } from 'svelte';
+  import { makeRemovalRequest } from '@utils/data-src-delete-n-edit';
+  import type { ServiceSource } from '@utils/fetch-line-numbers';
 
   interface Props {
     categoryName: string;
     sectionName: string;
     serviceName: string;
+    source?: ServiceSource;
   }
-  const { categoryName, sectionName, serviceName }: Props = $props();
+  const { categoryName, sectionName, serviceName, source }: Props = $props();
 
   const apYaml =
     'https://github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml';
 
-  let yamlContent = $state('');
-  let editLink = $state(apYaml);
-
-  onMount(async () => {
-    const results = await fetchSrcData(categoryName, sectionName, serviceName);
-    yamlContent = results.yamlContent;
-
-    const lineNumbers = results.lineNumbers || null;
-    const numberRange = lineNumbers
-      ? `#L${lineNumbers.start}-L${lineNumbers.end}`
-      : '';
-    const yamlLink =
-      'https://github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml';
-    editLink = `${yamlLink}${numberRange}`;
-  });
+  const yamlContent = source?.yaml ?? '';
+  const lineNumbers = source?.lineNumbers;
+  const editLink = lineNumbers
+    ? `${apYaml}#L${lineNumbers.start}-L${lineNumbers.end}`
+    : apYaml;
 </script>
 
 <div class="actions">

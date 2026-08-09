@@ -16,6 +16,7 @@ import SocialShare from '@components/form/Social.astro';
 import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
+import { fetchServiceSources } from '@utils/fetch-line-numbers';
 import { codebergUrl } from '@utils/parse-markdown';
 import { plainText, truncate } from '@utils/meta-tags';
 import { fetchChangelog } from '@utils/fetch-changelog';
@@ -160,6 +161,7 @@ const discordData = discordInvite
 	: null;
 const redditData = subreddit ? await fetchRedditInfo(subreddit) : null;
 const dockerData = await fetchDockerData(name);
+const sources = await fetchServiceSources(categoryName, parentSection.name);
 const websiteData =
 	url && !ignoredSites.some((s) => url.includes(s))
 		? await fetchWebsiteInfo(url)
@@ -368,11 +370,11 @@ const makeSoftwareSchema = () => {
 		<section>
 			<h2>About the Data: {name}</h2>
 			<DataActions
-				client:load
 				categoryName={categoryName}
 				sectionName={parentSection.name}
 				serviceName={name}
 				history={serviceHistory}
+				source={sources[name]}
 			/>
 			<h3>API</h3>
 			<p>
