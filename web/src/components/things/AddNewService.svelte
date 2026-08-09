@@ -1,5 +1,5 @@
 <script lang="ts">
-  import yaml from 'js-yaml';
+  import * as yaml from 'js-yaml';
   import { makeAdditionRequest } from '../../utils/data-src-delete-n-edit';
 
   let { isDisabled = false }: { isDisabled?: boolean } = $props();
@@ -230,8 +230,7 @@
         bind:value={serviceDescription}
         id="service-description"
         required
-        autocomplete="off"
-      ></textarea>
+        autocomplete="off"></textarea>
       <p>
         Please provide a description for this listing. Keep it factual and
         objective. Markdown is supported.

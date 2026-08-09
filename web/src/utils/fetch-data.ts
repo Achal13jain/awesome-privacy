@@ -1,4 +1,4 @@
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 import { error } from './logger';
 import { safeFetch } from './safe-fetch';
 

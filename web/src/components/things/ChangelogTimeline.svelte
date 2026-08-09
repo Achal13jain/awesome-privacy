@@ -264,24 +264,20 @@
 
   const allItems = $derived(
     [
-      ...entries.map(
-        (e): TimelineItem => ({
-          kind: 'entry',
-          date: e.date,
-          sha: e.sha,
-          pr: e.pr,
-          data: e,
-        }),
-      ),
-      ...rejections.map(
-        (r): TimelineItem => ({
-          kind: 'rejection',
-          date: r.date,
-          sha: `rej-${r.pr.number}`,
-          pr: r.pr,
-          data: r,
-        }),
-      ),
+      ...entries.map((e): TimelineItem => ({
+        kind: 'entry',
+        date: e.date,
+        sha: e.sha,
+        pr: e.pr,
+        data: e,
+      })),
+      ...rejections.map((r): TimelineItem => ({
+        kind: 'rejection',
+        date: r.date,
+        sha: `rej-${r.pr.number}`,
+        pr: r.pr,
+        data: r,
+      })),
     ].sort((a, b) => b.date.localeCompare(a.date)),
   );
 
