@@ -125,9 +125,9 @@ const metrics = await getMetrics(github);
       display: flex;
       gap: var(--space-xs);
       transition: var(--transition-normal);
-      color: var(--accent-3);
+      color: var(--accent-3-text);
       &:hover {
-        color: var(--accent-3);
+        color: var(--accent-3-text);
         text-decoration: underline;
       }
     }
@@ -137,7 +137,7 @@ const metrics = await getMetrics(github);
     }
   }
   :global(svg) {
-    color: var(--foregroung);
+    color: var(--foreground);
     width: var(--text-md);
     height: var(--text-md);
   }

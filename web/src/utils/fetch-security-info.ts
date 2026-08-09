@@ -1,26 +1,17 @@
-import { error } from './logger';
-import { safeFetch } from './safe-fetch';
-import { apiBase, enrichHeaders } from './api-config';
+import { fetchEnrich } from './fetch-enrich';
 
 const normalizeRepo = (github: string): string =>
   github.replace(/^https?:\/\/github\.com\//, '').replace(/\/+$/, '');
 
-export const fetchSecurityReport = async (
+export const fetchSecurityReport = (
   github: string,
 ): Promise<SecurityReportResponse | null> => {
   const repo = normalizeRepo(github);
-  const endpoint = `${apiBase}/v1/enrich/security/${repo}`;
-  try {
-    const res = await safeFetch(endpoint, { headers: enrichHeaders() });
-    if (!res.ok) {
-      error('Security Report', `HTTP ${res.status} for ${repo} (${endpoint})`);
-      return null;
-    }
-    return await res.json();
-  } catch (err) {
-    error('Security Report', `Network error for ${repo}: ${err}`);
-    return null;
-  }
+  return fetchEnrich<SecurityReportResponse>(
+    'Security Report',
+    `/v1/enrich/security/${repo}`,
+    repo,
+  );
 };
 
 export interface SecurityCheck {

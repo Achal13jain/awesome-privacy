@@ -1,26 +1,17 @@
-import { error } from './logger';
-import { safeFetch } from './safe-fetch';
-import { apiBase, enrichHeaders } from './api-config';
+import { fetchEnrich } from './fetch-enrich';
 
 const normalizeRepo = (github: string): string =>
   github.replace(/^https?:\/\/github\.com\//, '').replace(/\/+$/, '');
 
-export const fetchGitHubStats = async (
+export const fetchGitHubStats = (
   github: string,
 ): Promise<GitHubStatsResponse | null> => {
   const repo = normalizeRepo(github);
-  const endpoint = `${apiBase}/v1/enrich/github/${repo}`;
-  try {
-    const res = await safeFetch(endpoint, { headers: enrichHeaders() });
-    if (!res.ok) {
-      error('GitHub Stats', `HTTP ${res.status} for ${repo} (${endpoint})`);
-      return null;
-    }
-    return await res.json();
-  } catch (err) {
-    error('GitHub Stats', `Network error for ${repo}: ${err}`);
-    return null;
-  }
+  return fetchEnrich<GitHubStatsResponse>(
+    'GitHub Stats',
+    `/v1/enrich/github/${repo}`,
+    repo,
+  );
 };
 
 export interface GitHubStatsResponse {

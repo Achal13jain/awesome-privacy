@@ -1,6 +1,4 @@
-import { error } from './logger';
-import { safeFetch } from './safe-fetch';
-import { apiBase, enrichHeaders } from './api-config';
+import { fetchEnrich } from './fetch-enrich';
 
 // Pull the id from an App Store URL's `/id123` segment, else pass it through.
 const extractId = (iosUrl: string): string => {
@@ -8,22 +6,12 @@ const extractId = (iosUrl: string): string => {
   return match ? match[1] : iosUrl;
 };
 
-export const fetchIosInfo = async (
-  iosUrl: string,
-): Promise<IoSApiResponse | null> => {
-  const endpoint = `${apiBase}/v1/enrich/ios/${extractId(iosUrl)}`;
-  try {
-    const res = await safeFetch(endpoint, { headers: enrichHeaders() });
-    if (!res.ok) {
-      error('iOS', `HTTP ${res.status} for ${iosUrl} (${endpoint})`);
-      return null;
-    }
-    return await res.json();
-  } catch (err) {
-    error('iOS', `Network error for ${iosUrl}: ${err}`);
-    return null;
-  }
-};
+export const fetchIosInfo = (iosUrl: string): Promise<IoSApiResponse | null> =>
+  fetchEnrich<IoSApiResponse>(
+    'iOS',
+    `/v1/enrich/ios/${extractId(iosUrl)}`,
+    iosUrl,
+  );
 
 export interface IoSApiResponse {
   artistViewUrl: string;

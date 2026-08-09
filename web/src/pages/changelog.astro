@@ -14,7 +14,7 @@ const changelog = await fetchChangelog();
 	<div class="changelog-page">
 		<Main>
 			<div class="changelog-head">
-				<h2>Changelog</h2>
+				<h1>Changelog</h1>
 				<a
 					class="rss-link"
 					href="/rss.xml"
@@ -64,7 +64,8 @@ const changelog = await fetchChangelog();
 		gap: var(--space-md);
 		flex-wrap: wrap;
 	}
-	h2 {
+	h1 {
+		font-family: var(--font-subtitle);
 		font-size: var(--text-3xl);
 		margin: 0;
 	}
@@ -76,7 +77,7 @@ const changelog = await fetchChangelog();
 		font-size: var(--text-sm);
 		font-weight: bold;
 		text-decoration: none;
-		color: var(--accent-fg);
+		color: var(--accent-3-fg);
 		background: var(--accent-3);
 		border: var(--border-light);
 		box-shadow: var(--shadow-sm);

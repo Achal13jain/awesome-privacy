@@ -66,7 +66,7 @@
     font-weight: bold;
     font-size: var(--text-4xl);
     margin: 0;
-    color: var(--accent-3);
+    color: var(--accent-3-text);
   }
   .title-display {
     all: unset;
@@ -83,7 +83,7 @@
     font-family: var(--font-subtitle);
     font-weight: bold;
     font-size: var(--text-4xl);
-    color: var(--accent-3);
+    color: var(--accent-3-text);
     background: transparent;
     border: none;
     border-bottom: 2px solid var(--accent-3);

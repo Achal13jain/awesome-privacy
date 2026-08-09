@@ -64,16 +64,12 @@ const putResultsIntoGroups = () => {
 const beer = putResultsIntoGroups();
 ---
 
-<Layout title="Search | Awesome Privacy">
+<Layout title={`Search: ${searchTerm} | Awesome Privacy`}>
 	<section>
 		<h1>Search</h1>
-		<Search client:visible data={categories} previousSearch={searchTerm} />
+		<Search client:visible previousSearch={searchTerm} />
 	</section>
-	<SmartSuggestions
-		client:visible
-		searchTerm={searchTerm || ''}
-		categories={categories}
-	/>
+	<SmartSuggestions client:visible searchTerm={searchTerm || ''} />
 	<section class="result-count">
 		<h3>Deep Search</h3>
 		<p>
@@ -84,7 +80,10 @@ const beer = putResultsIntoGroups();
 		{
 			beer.map((category) => (
 				<div class="category">
-					<a class="category-title" href={`/${slugify(category.categoryName)}`}>
+					<a
+						class="category-title"
+						href={`/${slugify(category.categoryName)}/`}
+					>
 						<h3>{category.categoryName}</h3>
 					</a>
 					<span class="section-icon">
@@ -121,7 +120,7 @@ const beer = putResultsIntoGroups();
 
 		h1 {
 			font-size: var(--text-4xl);
-			color: var(--accent-3);
+			color: var(--accent-3-text);
 			font-family: var(--font-subtitle);
 			text-align: center;
 			margin: var(--space-md) 0;
@@ -134,7 +133,7 @@ const beer = putResultsIntoGroups();
 		margin: var(--space-md) auto 0 auto;
 		h3 {
 			margin: 0;
-			color: var(--accent-3);
+			color: var(--accent-3-text);
 			font-size: var(--text-xl);
 		}
 		p {
@@ -153,7 +152,7 @@ const beer = putResultsIntoGroups();
 		.category {
 			padding: var(--space-md);
 			box-shadow: var(--shadow-md);
-			background: var(--accent-fg);
+			background: var(--surface);
 			border: var(--border-heavy);
 			border-radius: var(--curve-sm);
 			display: inline-flex;
@@ -183,7 +182,7 @@ const beer = putResultsIntoGroups();
 					height: var(--text-3xl);
 					opacity: var(--opacity-dim);
 					text-shadow: 3px 3px 0 black;
-					color: var(--accent-3);
+					color: var(--accent-3-text);
 					transition: var(--transition-normal);
 				}
 			}

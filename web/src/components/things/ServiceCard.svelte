@@ -21,7 +21,7 @@
   <div class="service-head">
     <a
       class="service-title"
-      href={`/${categorySlug}/${sectionSlug}/${serviceRef}`}
+      href={`/${categorySlug}/${sectionSlug}/${serviceRef}/`}
     >
       <h4>{service.name}</h4>
     </a>
@@ -90,7 +90,7 @@
         <FontAwesome iconName="sourceCode" /> Source
       </a>
     {/if}
-    <a href={`/${categorySlug}/${sectionSlug}/${serviceRef}`}>
+    <a href={`/${categorySlug}/${sectionSlug}/${serviceRef}/`}>
       <FontAwesome iconName="viewReport" /> View Report ➔
     </a>
   </div>

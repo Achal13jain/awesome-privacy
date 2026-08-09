@@ -1,32 +1,30 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import Fuse from 'fuse.js';
-  import { slugify } from '@utils/fetch-data';
-  import type { Category } from '../../types/Service';
+  import { fetchCategories, slugify } from '@utils/fetch-data';
   import { formatLink } from '@utils/parse-markdown';
   import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
   import type { SearchItem } from '@utils/do-searchy-searchy';
 
   interface Props {
-    data: Category[];
     previousSearch?: string | undefined;
   }
-  const { data, previousSearch = undefined }: Props = $props();
+  const { previousSearch = undefined }: Props = $props();
 
   let fuse: Fuse<SearchItem> | null = $state(null);
   let searchQuery = $state('');
 
   // Initialize Fuse.js
-  onMount(() => {
-    const items = prepareSearchItems(data);
+  onMount(async () => {
+    const items = prepareSearchItems(await fetchCategories());
     fuse = new Fuse(items, searchOptions);
   });
 
   const makeResultLink = (cat?: string, sec?: string, itm?: string) => {
     if (!cat) return '/';
-    if (!sec) return `/${slugify(cat)}`;
-    if (!itm) return `/${slugify(cat)}/${slugify(sec)}`;
-    return `/${slugify(cat)}/${slugify(sec)}/${slugify(itm)}`;
+    if (!sec) return `/${slugify(cat)}/`;
+    if (!itm) return `/${slugify(cat)}/${slugify(sec)}/`;
+    return `/${slugify(cat)}/${slugify(sec)}/${slugify(itm)}/`;
   };
 
   const makeResultText = (cat?: string, sec?: string, itm?: string) => {
@@ -48,17 +46,7 @@
     return '';
   };
 
-  function handleKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      if (window) {
-        window.location.href = `/search/${encodeURIComponent(searchQuery)}`;
-      }
-    }
-    if (event.key === 'Escape') {
-      searchQuery = '';
-    }
-  }
+  let activeIndex = $state(-1);
 
   const results: SearchItem[] = $derived(
     searchQuery && fuse
@@ -68,6 +56,31 @@
           .slice(0, 25)
       : [],
   );
+
+  function handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      const step = event.key === 'ArrowDown' ? 1 : -1;
+      activeIndex = (activeIndex + step + results.length) % results.length;
+      return;
+    }
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      const active = results[activeIndex];
+      window.location.href = active
+        ? makeResultLink(active.category, active.sectionName, active.name)
+        : `/search/${encodeURIComponent(searchQuery)}/`;
+    }
+    if (event.key === 'Escape') {
+      searchQuery = '';
+      activeIndex = -1;
+    }
+  }
+
+  $effect(() => {
+    searchQuery;
+    activeIndex = -1;
+  });
 </script>
 
 <div class="search-wrap">
@@ -81,15 +94,28 @@
     id="search"
     placeholder={previousSearch || 'Start typing...'}
     autocomplete="off"
+    role="combobox"
+    aria-expanded={results.length > 0}
+    aria-controls="search-results"
+    aria-autocomplete="list"
+    aria-activedescendant={activeIndex >= 0
+      ? `search-result-${activeIndex}`
+      : undefined}
     bind:value={searchQuery}
     onkeydown={handleKeyDown}
   />
 
   {#if searchQuery.length > 0}
     <div class="suggestions">
-      <ul>
-        {#each results as result (result.name + result.category + result.sectionName)}
-          <li class="result-row">
+      <ul id="search-results" role="listbox" aria-label="Search results">
+        {#each results as result, i (result.name + result.category + result.sectionName)}
+          <li
+            class="result-row"
+            class:active={i === activeIndex}
+            id={`search-result-${i}`}
+            role="option"
+            aria-selected={i === activeIndex}
+          >
             <a
               href={makeResultLink(
                 result.category,
@@ -182,8 +208,7 @@
         box-shadow: var(--shadow-sm);
         transform: translateY(-0.5rem);
         max-height: 500px;
-        overflow-y: scroll;
-        background: var(--background-form);
+        overflow-y: auto;
         li.result-row {
           padding: var(--space-sm) var(--space-md);
           margin: var(--space-sm) 0;
@@ -198,7 +223,7 @@
               align-items: center;
               gap: var(--space-sm);
               i {
-                color: var(--accent);
+                color: var(--accent-text);
                 font-weight: bold;
                 font-style: normal;
               }
@@ -206,8 +231,9 @@
                 border-radius: var(--curve-md);
                 width: 1.25rem;
                 height: 1.25rem;
+                object-fit: contain;
                 font-size: 10px;
-                color: var(--accent);
+                color: var(--accent-text);
                 overflow: hidden;
                 background: var(--accent-translucent);
                 padding: 1px;
@@ -218,9 +244,12 @@
               opacity: var(--opacity-soft);
             }
           }
-          &:hover {
+          &:hover,
+          &.active {
             background: var(--accent);
-            .name i {
+            a,
+            .name i,
+            .path {
               color: var(--accent-fg);
             }
           }

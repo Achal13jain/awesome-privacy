@@ -30,8 +30,15 @@
   });
   let searchQuery = $state('');
 
+  const MAX_VISIBLE_CHANGES = 8;
+  let expanded: Record<string, boolean> = $state({});
+
   function toggle(key: Filter) {
     on = { ...on, [key]: !on[key] };
+  }
+
+  function toggleExpanded(sha: string) {
+    expanded = { ...expanded, [sha]: !expanded[sha] };
   }
 
   type TimelineItem =
@@ -153,7 +160,7 @@
   function serviceLink(s: ServiceChange, isRemoval: boolean): string {
     const c = slugify(s.category),
       sc = slugify(s.section);
-    return isRemoval ? `/${c}/${sc}` : `/${c}/${sc}/${slugify(s.name)}`;
+    return isRemoval ? `/${c}/${sc}/` : `/${c}/${sc}/${slugify(s.name)}/`;
   }
 
   type ChangeRow = {
@@ -222,7 +229,7 @@
         badge: 'New Section',
         cls: 'add',
         name: v.name,
-        href: `/${slugify(v.category)}/${slugify(v.name)}`,
+        href: `/${slugify(v.category)}/${slugify(v.name)}/`,
       })),
       ...sc.removed.map((v) => ({
         badge: 'Section Removed',
@@ -234,7 +241,7 @@
         badge: 'Section Renamed',
         cls: 'mod',
         name: `${v.from.section} → ${v.to.section}`,
-        href: `/${slugify(v.to.category)}/${slugify(v.to.section)}`,
+        href: `/${slugify(v.to.category)}/${slugify(v.to.section)}/`,
         path:
           v.from.category === v.to.category
             ? `in ${v.to.category}`
@@ -257,24 +264,20 @@
 
   const allItems = $derived(
     [
-      ...entries.map(
-        (e): TimelineItem => ({
-          kind: 'entry',
-          date: e.date,
-          sha: e.sha,
-          pr: e.pr,
-          data: e,
-        }),
-      ),
-      ...rejections.map(
-        (r): TimelineItem => ({
-          kind: 'rejection',
-          date: r.date,
-          sha: `rej-${r.pr.number}`,
-          pr: r.pr,
-          data: r,
-        }),
-      ),
+      ...entries.map((e): TimelineItem => ({
+        kind: 'entry',
+        date: e.date,
+        sha: e.sha,
+        pr: e.pr,
+        data: e,
+      })),
+      ...rejections.map((r): TimelineItem => ({
+        kind: 'rejection',
+        date: r.date,
+        sha: `rej-${r.pr.number}`,
+        pr: r.pr,
+        data: r,
+      })),
     ].sort((a, b) => b.date.localeCompare(a.date)),
   );
 
@@ -312,7 +315,8 @@
   <div class="controls-body">
     <input
       class="search"
-      type="text"
+      type="search"
+      aria-label="Filter changes by service, category or user"
       placeholder="Filter by service, category, user.."
       bind:value={searchQuery}
     />
@@ -321,6 +325,7 @@
         <button
           class="pill {f.key}"
           class:active={on[f.key]}
+          aria-pressed={on[f.key]}
           onclick={() => toggle(f.key)}
         >
           <span class="icon">{f.icon}</span>{f.label}
@@ -330,12 +335,16 @@
   </div>
 </details>
 
+<p class="sr-only" role="status">
+  Showing {filtered.length} of {allItems.length} entries
+</p>
+
 {#if filtered.length === 0}
   <p class="empty">No matching changes found.</p>
 {/if}
 
 {#each Object.entries(grouped) as [month, monthItems] (month)}
-  <h3 class="month-header">{month}</h3>
+  <h2 class="month-header">{month}</h2>
   {#each monthItems as item (item.sha)}
     <article class="entry">
       <time class="entry-date">{formatDate(item.date)}</time>
@@ -346,6 +355,8 @@
               href={`https://github.com/${item.pr.author}`}
               target="_blank"
               rel="noreferrer"
+              aria-hidden="true"
+              tabindex="-1"
             >
               <img
                 class="avatar"
@@ -394,31 +405,54 @@
               <span class="path">Not merged</span>
             </div>
           {:else}
-            {#each changeRows(item.data) as row (`${row.cls}/${row.path}/${row.name}`)}
-              <div class="change">
-                <span class="badge {row.cls}">{row.badge}</span>
-                {#if row.href}
-                  <a
-                    class="svc-name"
-                    class:removed={row.cls === 'rem'}
-                    href={row.href}>{row.name}</a
-                  >
-                {:else}
-                  <strong>{row.name}</strong>
-                {/if}
-                {#if row.fields}<span class="fields"
-                    >updated {row.fields.join(', ')}</span
-                  >{/if}
-                {#if row.path && !row.fields}<span class="path">{row.path}</span
-                  >{/if}
-              </div>
+            {@const rows = changeRows(item.data)}
+            {@const overflow = rows.length - MAX_VISIBLE_CHANGES}
+            {@const isOpen = !!expanded[item.sha]}
+            {#each rows.slice(0, MAX_VISIBLE_CHANGES) as row, i (i)}
+              {@render change(row)}
             {/each}
+            {#if overflow > 0}
+              <div
+                class="extra"
+                class:open={isOpen}
+                id={`changes-${item.sha}`}
+                inert={!isOpen}
+              >
+                <div>
+                  {#each rows.slice(MAX_VISIBLE_CHANGES) as row, i (i)}
+                    {@render change(row)}
+                  {/each}
+                </div>
+              </div>
+              <button
+                class="show-more"
+                aria-expanded={isOpen}
+                aria-controls={`changes-${item.sha}`}
+                onclick={() => toggleExpanded(item.sha)}
+              >
+                {isOpen ? 'Show less' : `+${overflow} more`}
+              </button>
+            {/if}
           {/if}
         </div>
       </div>
     </article>
   {/each}
 {/each}
+
+{#snippet change(row: ChangeRow)}
+  <div class="change">
+    <span class="badge {row.cls}">{row.badge}</span>
+    {#if row.href}
+      <a class="svc-name" href={row.href}>{row.name}</a>
+    {:else}
+      <strong>{row.name}</strong>
+    {/if}
+    {#if row.fields}<span class="fields">updated {row.fields.join(', ')}</span
+      >{/if}
+    {#if row.path && !row.fields}<span class="path">{row.path}</span>{/if}
+  </div>
+{/snippet}
 
 <style lang="scss">
   @use '../../styles/mixins' as *;
@@ -449,7 +483,7 @@
       border: var(--border-heavy);
       border-radius: var(--curve-lg);
       box-shadow: var(--shadow-xs);
-      background: var(--accent-fg);
+      background: var(--surface);
       color: var(--foreground);
       &:focus {
         outline: none;
@@ -471,6 +505,7 @@
       display: flex;
       align-items: center;
       gap: var(--space-xs);
+      min-height: 24px;
       padding: 0.15rem var(--space-sm);
       border: 1px solid transparent;
       border-radius: var(--curve-md);
@@ -536,7 +571,7 @@
     margin: 1.5rem 0 var(--space-sm) 0;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid var(--accent-3);
-    color: var(--accent-3);
+    color: var(--accent-3-text);
     font-family: var(--font-subtitle);
   }
 
@@ -573,7 +608,7 @@
     .author a {
       color: var(--foreground);
       &:hover {
-        color: var(--accent);
+        color: var(--accent-text);
       }
     }
     .avatar {
@@ -604,6 +639,39 @@
     }
   }
 
+  .extra {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: var(--transition-normal);
+    &.open {
+      grid-template-rows: 1fr;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      overflow: hidden;
+    }
+  }
+
+  .show-more {
+    align-self: flex-start;
+    min-height: 24px;
+    margin-top: 0.2rem;
+    padding: 0.1rem var(--space-sm);
+    border: 1px solid currentColor;
+    border-radius: var(--curve-md);
+    background: none;
+    color: var(--accent-3-text);
+    cursor: pointer;
+    font-family: var(--font-subtitle);
+    font-size: var(--text-xs);
+    transition: var(--transition-normal);
+    &:hover {
+      background: color-mix(in srgb, var(--accent-3) 15%, transparent);
+    }
+  }
+
   .badge {
     @include changelog-badge;
     &.add {
@@ -630,7 +698,7 @@
     text-decoration: none;
   }
   a.svc-name:hover {
-    color: var(--accent);
+    color: var(--accent-text);
     text-decoration: underline;
   }
 

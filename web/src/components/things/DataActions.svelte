@@ -1,13 +1,12 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import {
-    fetchSrcData,
     makeRemovalRequest,
     makeEditRequest,
   } from '@utils/data-src-delete-n-edit';
   import FontAwesome from '@components/form/FontAwesome.svelte';
 
   import type { ChangelogPr } from '../../utils/fetch-changelog';
+  import type { ServiceSource } from '@utils/fetch-line-numbers';
 
   interface HistoryItem {
     date: string;
@@ -22,16 +21,18 @@
     sectionName: string;
     serviceName: string;
     history?: HistoryItem[];
+    source?: ServiceSource;
   }
   const {
     categoryName,
     sectionName,
     serviceName,
     history = [],
+    source,
   }: Props = $props();
 
-  let lineNumbers: { start: number; end: number } | null = $state(null);
-  let yamlContent = $state('');
+  const lineNumbers = $derived(source?.lineNumbers);
+  const yamlContent = $derived(source?.yaml ?? '');
 
   const getGitHubSrcFile = () => {
     if (lineNumbers) {
@@ -49,18 +50,12 @@
       'style=felipec&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on';
     return `${host}/iframe.html?target=${target}&${opts}`;
   };
-
-  onMount(async () => {
-    const results = await fetchSrcData(categoryName, sectionName, serviceName);
-    lineNumbers = results.lineNumbers;
-    yamlContent = results.yamlContent;
-  });
 </script>
 
 {#if history.length > 0}
   <h4>Change History</h4>
   <ul class="history">
-    {#each history as h}
+    {#each history as h (h)}
       <li>
         <span class="history-badge {h.type}">
           {h.type === 'added'
@@ -118,13 +113,14 @@
     />
     Note that some of the information shown above has been aggregated from external
     sources, a list of these can be found
-    <a href="/about#our-data">data documentation</a>.
+    <a href="/about/#our-data">data documentation</a>.
   </p>
 
   <h4>Origin Data</h4>
   <iframe
     frameborder="0"
     scrolling="no"
+    loading="lazy"
     class="yaml-embed"
     allow="clipboard-write"
     title="awesome-privacy.yml"
@@ -157,7 +153,7 @@
     >
       <FontAwesome iconName="edit" /> Submit Edit to {serviceName}
     </a>
-    <a class="button-link" href="/submit">
+    <a class="button-link" href="/submit/">
       <FontAwesome iconName="add" /> Add alternative
     </a>
   </div>
@@ -186,7 +182,7 @@
     background: var(--accent-3);
     border: var(--border-light);
     box-shadow: var(--shadow-sm);
-    color: var(--accent-fg);
+    color: var(--accent-3-fg);
     text-decoration: none;
     border-radius: var(--curve-pill);
     padding: var(--space-sm) var(--space-md);
@@ -213,7 +209,7 @@
       flex-wrap: wrap;
       padding: 0.3rem 0;
       font-size: 0.95rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid var(--surface-line);
       &:last-child {
         border-bottom: none;
       }
@@ -253,7 +249,7 @@
     a {
       color: var(--foreground);
       &:hover {
-        color: var(--accent);
+        color: var(--accent-text);
       }
     }
   }
@@ -262,7 +258,7 @@
     padding: 0.05rem 0.3rem;
     border-radius: var(--curve-sm);
     background: var(--accent-3);
-    color: var(--accent-fg);
+    color: var(--accent-3-fg);
     text-decoration: none;
     font-family: var(--font-subtitle);
     &:hover {

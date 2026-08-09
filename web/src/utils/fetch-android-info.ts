@@ -1,30 +1,16 @@
-import { error } from './logger';
-import { safeFetch } from './safe-fetch';
-import { apiBase, enrichHeaders } from './api-config';
+import { fetchEnrich } from './fetch-enrich';
 
 const extractPackage = (str: string): string =>
   str.includes('id=') ? str.split('id=')[1] : str;
 
-export const fetchAndroidInfo = async (
+export const fetchAndroidInfo = (
   androidPackage: string,
-): Promise<AndroidInfo | null> => {
-  const pkg = extractPackage(androidPackage);
-  const endpoint = `${apiBase}/v1/enrich/android/${pkg}`;
-  try {
-    const res = await safeFetch(endpoint, { headers: enrichHeaders() });
-    if (!res.ok) {
-      error(
-        'Android',
-        `HTTP ${res.status} for ${androidPackage} (${endpoint})`,
-      );
-      return null;
-    }
-    return await res.json();
-  } catch (err) {
-    error('Android', `Network error for ${androidPackage}: ${err}`);
-    return null;
-  }
-};
+): Promise<AndroidInfo | null> =>
+  fetchEnrich<AndroidInfo>(
+    'Android',
+    `/v1/enrich/android/${extractPackage(androidPackage)}`,
+    androidPackage,
+  );
 
 interface Tracker {
   id: number;

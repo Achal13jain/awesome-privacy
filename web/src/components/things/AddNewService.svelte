@@ -1,5 +1,5 @@
 <script lang="ts">
-  import yaml from 'js-yaml';
+  import * as yaml from 'js-yaml';
   import { makeAdditionRequest } from '../../utils/data-src-delete-n-edit';
 
   let { isDisabled = false }: { isDisabled?: boolean } = $props();
@@ -117,7 +117,7 @@
 
 <p>
   Before completing this form, you must ensure that the service you are adding
-  aligns with the <a href="/about#creteria">Requirements</a> for Awesome
+  aligns with the <a href="/about/#creteria">Requirements</a> for Awesome
   Privacy.
   <br />
   You'll need a GitHub account in order to submit this form.
@@ -174,7 +174,7 @@
       </select>
       <p>
         Choose the top-level category, which should align with the <a
-          href="/browse">one of these</a
+          href="/browse/">one of these</a
         >.
       </p>
     </div>
@@ -230,8 +230,7 @@
         bind:value={serviceDescription}
         id="service-description"
         required
-        autocomplete="off"
-      ></textarea>
+        autocomplete="off"></textarea>
       <p>
         Please provide a description for this listing. Keep it factual and
         objective. Markdown is supported.
@@ -445,7 +444,7 @@
     margin: var(--space-sm) auto var(--space-md) auto;
     border: var(--border-heavy);
     box-shadow: var(--shadow-sm);
-    background: var(--accent-fg);
+    background: var(--surface);
     border-radius: var(--curve-sm);
     background: color-mix(in srgb, var(--changelog-rem) 20%, transparent);
   }
@@ -532,7 +531,6 @@
   .open-in-gh {
     margin: 0 auto;
     font-size: var(--text-sm);
-    opacity: var(--opacity-muted);
     display: block;
     text-align: center;
   }
@@ -540,7 +538,7 @@
   button {
     cursor: pointer;
     background: var(--accent-3);
-    color: var(--accent-fg);
+    color: var(--accent-3-fg);
     padding: var(--space-sm) var(--space-lg);
     border: var(--border-light);
     box-shadow: var(--shadow-sm);

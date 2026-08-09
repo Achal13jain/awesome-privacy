@@ -141,9 +141,9 @@ const highlights = [
 	<div class="breadcrumbs">
 		<span>
 			<a href="/">Awesome Privacy</a>
-			➔ <a href={`/${catSlug}`}>{categoryName}</a>
-			➔ <a href={`/${catSlug}/${secSlug}`}>{parentSection.name}</a>
-			➔ <a href={`/${catSlug}/${secSlug}/${slugify(name)}`}>{name}</a>
+			➔ <a href={`/${catSlug}/`}>{categoryName}</a>
+			➔ <a href={`/${catSlug}/${secSlug}/`}>{parentSection.name}</a>
+			➔ <a href={`/${catSlug}/${secSlug}/${slugify(name)}/`}>{name}</a>
 		</span>
 	</div>
 	<div class="save-listing">
@@ -156,7 +156,7 @@ const highlights = [
 		/>
 	</div>
 	<div class="intro">
-		<ServiceIcon name={name} url={url} icon={icon} size={60} />
+		<ServiceIcon name={name} url={url} icon={icon} size={60} eager />
 		<div>
 			<p class="description" set:html={parseMarkdown(description)} />
 			<ul>
@@ -175,9 +175,9 @@ const highlights = [
 				{
 					(parentSection.alternativeTo || []).length > 0 && (
 						<div class="related-group">
-							<h4 class="avoid">
+							<h2 class="avoid">
 								<FontAwesome iconName="faceBad" /> Avoid
-							</h4>
+							</h2>
 							<ul>
 								{(parentSection.alternativeTo || []).map((alt: string) => (
 									<li>
@@ -191,13 +191,13 @@ const highlights = [
 				{
 					otherServices.length > 0 && (
 						<div class="related-group">
-							<h4 class="consider">
+							<h2 class="consider">
 								<FontAwesome iconName="faceGood" /> Also Consider
-							</h4>
+							</h2>
 							<ul>
 								{otherServices.map((s: Service) => (
 									<li>
-										<a href={`/${catSlug}/${secSlug}/${slugify(s.name)}`}>
+										<a href={`/${catSlug}/${secSlug}/${slugify(s.name)}/`}>
 											{s.name}
 										</a>
 									</li>
@@ -228,7 +228,7 @@ const highlights = [
 		position: relative;
 		border: var(--border-heavy);
 		box-shadow: var(--shadow-lg);
-		background: var(--accent-fg);
+		background: var(--surface);
 	}
 
 	.service-head {
@@ -303,7 +303,7 @@ const highlights = [
 		flex-wrap: wrap;
 		margin: var(--space-md) 0;
 		.related-group {
-			h4 {
+			h2 {
 				font-size: var(--text-sm);
 				font-family: var(--font-subtitle);
 				text-transform: uppercase;
@@ -339,7 +339,7 @@ const highlights = [
 						color: var(--foreground);
 						text-decoration: none;
 						&:hover {
-							color: var(--accent);
+							color: var(--accent-text);
 						}
 					}
 					span {
@@ -360,7 +360,6 @@ const highlights = [
 			display: flex;
 			align-items: center;
 			gap: var(--space-xs);
-			opacity: var(--opacity-muted);
 			font-size: var(--text-sm);
 			padding: var(--space-sm) 0;
 			:global(svg) {

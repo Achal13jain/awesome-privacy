@@ -5,6 +5,7 @@ import svelte from '@astrojs/svelte';
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 import { printSummary } from './src/utils/logger.ts';
+import { fetchLastmod } from './src/utils/fetch-lastmod.ts';
 
 // Deploy target (vercel | netlify | cloudflare | node). Default: vercel.
 const env = { ...import.meta.env, ...process.env };
@@ -41,11 +42,19 @@ const buildLogger = {
 	},
 };
 
+// Get accurate lasmod date for each page from changelog, for sitemap
+const lastmod = await fetchLastmod();
+
+const serialize = (item) => {
+	const changed = lastmod[new URL(item.url).pathname];
+	return changed ? { ...item, lastmod: new Date(changed) } : item;
+};
+
 export default defineConfig({
 	output,
 	site,
 	adapter: await loadAdapter(),
-	integrations: [svelte(), partytown(), sitemap(), buildLogger],
+	integrations: [svelte(), partytown(), sitemap({ serialize }), buildLogger],
 	vite: {
 		css: {
 			preprocessorOptions: {

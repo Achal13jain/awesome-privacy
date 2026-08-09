@@ -1,23 +1,13 @@
-import { error } from './logger';
-import { safeFetch } from './safe-fetch';
-import { apiBase, enrichHeaders } from './api-config';
+import { fetchEnrich } from './fetch-enrich';
 
-export const fetchDiscordInfo = async (
+export const fetchDiscordInfo = (
   discordInvite: string,
-): Promise<DiscordInfo | null> => {
-  const endpoint = `${apiBase}/v1/enrich/discord/${discordInvite}`;
-  try {
-    const res = await safeFetch(endpoint, { headers: enrichHeaders() });
-    if (!res.ok) {
-      error('Discord', `HTTP ${res.status} for ${discordInvite} (${endpoint})`);
-      return null;
-    }
-    return await res.json();
-  } catch (err) {
-    error('Discord', `Network error for ${discordInvite}: ${err}`);
-    return null;
-  }
-};
+): Promise<DiscordInfo | null> =>
+  fetchEnrich<DiscordInfo>(
+    'Discord',
+    `/v1/enrich/discord/${discordInvite}`,
+    discordInvite,
+  );
 
 export interface DiscordInfo {
   inviteCode: string;
