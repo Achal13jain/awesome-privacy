@@ -231,6 +231,7 @@
                 border-radius: var(--curve-md);
                 width: 1.25rem;
                 height: 1.25rem;
+                object-fit: contain;
                 font-size: 10px;
                 color: var(--accent-text);
                 overflow: hidden;

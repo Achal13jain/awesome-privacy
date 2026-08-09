@@ -129,6 +129,7 @@
         .service-icon {
           width: 2.5rem;
           height: 2.5rem;
+          object-fit: contain;
           border-radius: var(--curve-sm);
 
           font-size: 10px;

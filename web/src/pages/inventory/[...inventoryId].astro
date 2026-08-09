@@ -28,7 +28,7 @@ if (serviceList.error) {
 
 <Layout title={`${makeTitle(inventoryId)} | Awesome Privacy`}>
 	<main>
-		<h2>{makeTitle(inventoryId)}</h2>
+		<h1>{makeTitle(inventoryId)}</h1>
 		{
 			cheekyLilError && (
 				<div class="error">
@@ -65,7 +65,7 @@ if (serviceList.error) {
 		flex-direction: column;
 		min-height: calc(100vh - 12rem);
 		font-size: var(--text-md);
-		h2 {
+		h1 {
 			font-family: var(--font-subtitle);
 			font-weight: bold;
 			font-size: var(--text-4xl);

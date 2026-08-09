@@ -42,6 +42,9 @@
     display: flex;
     align-items: center;
     gap: var(--space-sm);
+    .service-icon {
+      object-fit: contain;
+    }
     :global(p) {
       @include line-clamp(3);
       margin: var(--space-sm) 0;
