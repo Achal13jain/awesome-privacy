@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T20:50:41Z",
+  "generatedAt": "2026-08-10T19:52:58Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -85,6 +85,7 @@
     "60f4dbb1d011f460385c7fe29b92bf0d122cd615",
     "61204318c73bb25efae3567bf64e55522b69cc47",
     "615fc63dbbcfc19a5fb911d893c2bc40ad33ab69",
+    "61613ca195b2b09ccaa9658d054b3d478b4d8476",
     "639eb6794696341f32b582c50a0ecd7a91db52d1",
     "690d3e40da8b0ef98b93ba5bf066dc88a84027cb",
     "698e818f03fda883ec55a630bd9380d7cf214bb8",
@@ -393,9 +394,41 @@
     735,
     737,
     739,
-    740
+    740,
+    742,
+    743,
+    744,
+    745
   ],
   "entries": [
+    {
+      "date": "2026-08-10",
+      "sha": "61613ca195b2b09ccaa9658d054b3d478b4d8476",
+      "pr": {
+        "number": 746,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/746",
+        "author": "lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "modified": [
+            {
+              "name": "Startpage",
+              "category": "Essentials",
+              "section": "Search Engines",
+              "fields": [
+                "androidApp",
+                "description",
+                "iosApp"
+              ]
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-08",
       "sha": "5b892ebb41adcc78a27924732899524cf0f4bdbd",
@@ -6844,6 +6877,46 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-10",
+      "title": "Add Zen Passwords to Password Managers notable mentions",
+      "pr": {
+        "number": 745,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/745",
+        "author": "itsmekgaurav",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/5519185?v=4"
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "title": "Adds JuicySMS to Virtual Phone Numbers",
+      "pr": {
+        "number": 744,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/744",
+        "author": "JuicyProgramming",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/57983809?v=4"
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "title": "[ADDITION] Warren in Virtual Private Networks",
+      "pr": {
+        "number": 743,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/743",
+        "author": "poka-IT",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/4574805?v=4"
+      }
+    },
+    {
+      "date": "2026-08-09",
+      "title": "Add Agent Island to Developer Tools",
+      "pr": {
+        "number": 742,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/742",
+        "author": "tristan666666",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/268806853?v=4"
+      }
+    },
     {
       "date": "2026-08-08",
       "title": "Adds MindMapVault to Digital Notes",
