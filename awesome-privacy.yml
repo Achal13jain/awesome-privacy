@@ -572,10 +572,12 @@ categories:
         icon: https://www.startpage.com/favicon.ico
         tosdrId: 418
         openSource: false
+        iosApp: https://apps.apple.com/us/app/startpage-private-browser/id6478921430
+        androidApp: com.startpage.app
         description: |
-          Dutch search engine that searches on Google and shows the results (slightly
-          rearranged). It has several configurations that improve privacy during use
-          (it is not open source)
+          Dutch search engine returning primarily Google results, proxied to strip IP and identifiers.
+          Includes an "Anonymous View" proxy for previewing results privately.
+          No third-party tracking or cookies, but does have it's own bot detection and analytics.
 
       - name: Brave Search
         url: https://search.brave.com/
