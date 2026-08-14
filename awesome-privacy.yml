@@ -2895,13 +2895,6 @@ categories:
           OTR XMPP if you do not want to provide an email address. Both VPS and domain name pricing is reasonable, with
           packages starting at $15/ month.
 
-      - name: Private Layer
-        url: https://www.privatelayer.com
-        acceptsCrypto: true
-        description: |
-          Offers enterprise-grade, high-speed offshore dedicated servers, they own their own data centres, have a solid
-          privacy policy and accept anonymous payment.
-
       - name: Servers Guru
         url: https://servers.guru
         acceptsCrypto: true
