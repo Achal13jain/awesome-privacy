@@ -2895,15 +2895,6 @@ categories:
           OTR XMPP if you do not want to provide an email address. Both VPS and domain name pricing is reasonable, with
           packages starting at $15/ month.
 
-      - name: Servers Guru
-        url: https://servers.guru
-        acceptsCrypto: true
-        tosdrId: 8079
-        description: |
-          Servers Guru provides affordable and anonymous VPS and cloud servers with dedicated cpu resources. They accept
-          crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from
-          reputable providers.
-
       - name: Bunker
         url: https://getbunker.net
         github: France-Nuage/plateforme
