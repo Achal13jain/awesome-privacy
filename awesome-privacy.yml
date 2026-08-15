@@ -2916,6 +2916,17 @@ categories:
           Bitcoin and Monero accepted, ISO 27001 certified, and powered by geothermal and hydro. Iceland sits
           outside the 14 Eyes, and 1984 only releases data on an Icelandic court order.
 
+      - name: Infomaniak
+        url: https://www.infomaniak.com
+        icon: https://www.infomaniak.com/favicon.ico
+        openSource: false
+        securityAudited: false
+        acceptsCrypto: false
+        description: |
+          Swiss web hosting, VPS and OpenStack cloud, from a company that builds and runs its own
+          datacenters and network (AS29222). ISO 27001 certified since 2018, and Swiss law keeps it outside
+          the 14 Eyes and the CLOUD Act. Card payment only, so there is no anonymous signup.
+
       notableMentions: |
         See also: [Bahnhof](https://bahnhof.cloud), which offers high-security hosting from its own data
         centres in Sweden, but takes card and PayPal only.
