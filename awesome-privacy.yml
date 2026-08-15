@@ -2906,15 +2906,18 @@ categories:
           OSI-approved. ISO 27001 is targeted, not held, and card-only payment means no anonymous signup.
 
       notableMentions: |
-        See also: [1984](https://1984.is), based in Iceland, which runs its own network, requires no ID
-        and accepts Bitcoin and Monero.
-        And [Bahnhof](https://bahnhof.cloud) offers high-security hosting from its own data centres in Sweden,
-        but takes card and PayPal only.
+        See also: [Bahnhof](https://bahnhof.cloud), which offers high-security hosting from its own data
+        centres in Sweden, but takes card and PayPal only.
+        [Greenhost](https://greenhost.net) runs its own network in Amsterdam, and hosts GlobaLeaks
+        whistleblowing platforms for journalists and NGOs.
+        [Exoscale](https://www.exoscale.com) is an ISO 27001 certified Swiss IaaS provider with EU zones,
+        though it is owned by Telekom Austria and colocates rather than owning its data centres.
+        And [FlokiNET](https://flokinet.is) hosts in Iceland, Finland and Romania, needs no personal data
+        and takes Monero, but its network is tracked by threat intelligence feeds for abuse.
       wordOfWarning: |
-        The country that your data is hosted in, will be subject to local laws and regulations.
-        It is therefore important to avoid a jurisdiction that is part of the
-        [5 eyes](https://en.wikipedia.org/wiki/Five_Eyes) (Australia, Canada, New Zealand, US and UK)
-        and [other international cooperatives](https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives)
+        The country that your data is hosted in will be subject to local laws and regulations.
+        It is therefore important to avoid a jurisdiction that is part of the 5 eyes and
+        [other international cooperatives](https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives)
         who have legal right to view your data.
 
     ###############################
