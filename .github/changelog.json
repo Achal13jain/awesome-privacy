@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T19:52:58Z",
+  "generatedAt": "2026-08-15T12:27:49Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -43,6 +43,7 @@
     "30569aa9b85bc55905b08c00719ce3715df6c8e7",
     "3196cfc9d503b8cfe9bab5de9c5c2e6b12dd59dd",
     "335a2df16b0f7accf9a56cc22aa7030dbdac6f13",
+    "350dd06439fdba13c56d4138a86f1b759a221677",
     "374c14a68a4c3df451e718cdb6e0447b1b7a3c56",
     "376a2ebe1336c956ef0b8f14b829bb12ede3c589",
     "37a568f94afd5a677598f080186f10e202108678",
@@ -398,9 +399,86 @@
     742,
     743,
     744,
-    745
+    745,
+    747,
+    748,
+    750
   ],
   "entries": [
+    {
+      "date": "2026-08-15",
+      "sha": "350dd06439fdba13c56d4138a86f1b759a221677",
+      "pr": {
+        "number": 751,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/751",
+        "author": "lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "1984",
+              "category": "Networking",
+              "section": "Cloud Hosting"
+            },
+            {
+              "name": "Infomaniak",
+              "category": "Networking",
+              "section": "Cloud Hosting"
+            }
+          ],
+          "removed": [
+            {
+              "name": "Private Layer",
+              "category": "Networking",
+              "section": "Cloud Hosting"
+            },
+            {
+              "name": "Servers Guru",
+              "category": "Networking",
+              "section": "Cloud Hosting"
+            }
+          ],
+          "modified": [
+            {
+              "name": "Bunker",
+              "category": "Networking",
+              "section": "Cloud Hosting",
+              "fields": [
+                "acceptsCrypto",
+                "description",
+                "openSource",
+                "securityAudited"
+              ]
+            },
+            {
+              "name": "Njalla",
+              "category": "Networking",
+              "section": "Cloud Hosting",
+              "fields": [
+                "description",
+                "openSource",
+                "securityAudited",
+                "url"
+              ]
+            },
+            {
+              "name": "Orange Website",
+              "category": "Networking",
+              "section": "Domain Registrars",
+              "fields": [
+                "description",
+                "openSource",
+                "securityAudited"
+              ]
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-10",
       "sha": "61613ca195b2b09ccaa9658d054b3d478b4d8476",
@@ -6878,6 +6956,36 @@
   ],
   "rejections": [
     {
+      "date": "2026-08-13",
+      "title": "Add YazSes to Accessibility",
+      "pr": {
+        "number": 750,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/750",
+        "author": "MSKazemi",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/13011878?v=4"
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Adds Atomic Agent to Developer Tools",
+      "pr": {
+        "number": 748,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/748",
+        "author": "sosidudku1",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/273119990?v=4"
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "title": "[Add] Yaps in Notable Mentions",
+      "pr": {
+        "number": 747,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/747",
+        "author": "richawo",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/35015261?v=4"
+      }
+    },
+    {
       "date": "2026-08-10",
       "title": "Add Zen Passwords to Password Managers notable mentions",
       "pr": {
@@ -6905,16 +7013,6 @@
         "url": "https://github.com/lissy93/awesome-privacy/pull/743",
         "author": "poka-IT",
         "authorAvatar": "https://avatars.githubusercontent.com/u/4574805?v=4"
-      }
-    },
-    {
-      "date": "2026-08-09",
-      "title": "Add Agent Island to Developer Tools",
-      "pr": {
-        "number": 742,
-        "url": "https://github.com/lissy93/awesome-privacy/pull/742",
-        "author": "tristan666666",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/268806853?v=4"
       }
     },
     {
