@@ -962,24 +962,20 @@ know about an incident as soon as possible, in order to minimize damage.
 
 ### Cloud Hosting
 
-Whether you are hosting a website and want to keep your users data safe,
-or if you are hosting your own file backup, cloud productivity suite or
-VP - then choosing a provider that respects your privacy and allows you
-to sign up anonymously, and will keep your files and data safe is be
-important.
+Web, VPS, storage and managed app hosting, from privacy-conscious
+providers that own and run their own infrastructure
 
-- **[<img src='https://njal.la/favicon.ico' width='14' alt='' /> Njalla](https://njal.la)** - Njalla is a privacy and security-focused domain registrar and VPN hosting provider. They own and manage all their own servers, which are based in Sweden. They accept crypto, for anonymous payments, an[…](https://awesome-privacy.xyz/networking/cloud-hosting/njalla "View full Njalla report") 
-- **[<img src='https://icon.horse/icon/www.privatelayer.com' width='14' alt='' /> Private Layer](https://www.privatelayer.com)** - Offers enterprise-grade, high-speed offshore dedicated servers, they own their own data centres, have a solid privacy policy and accept anonymous payment. 
-- **[<img src='https://icon.horse/icon/servers.guru' width='14' alt='' /> Servers Guru](https://servers.guru)** - Servers Guru provides affordable and anonymous VPS and cloud servers with dedicated cpu resources. They accept crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal inform[…](https://awesome-privacy.xyz/networking/cloud-hosting/servers-guru "View full Servers Guru report") 
-- **[<img src='https://getbunker.net/images/en/svg/logo.svg' width='14' alt='' /> Bunker](https://getbunker.net)** - Sovereign open-source cloud platform (SSPL-1.0) hosted entirely in France. Offers managed hosting of open-source apps (Grafana, Matomo, Vaultwarden, etc.) and S3-compatible object storage. GDPR-native[…](https://awesome-privacy.xyz/networking/cloud-hosting/bunker "View full Bunker report") 
+- **[<img src='https://njal.la/favicon.ico' width='14' alt='' /> Njalla](https://njal.la/servers/)** - VPS, VPN and domain service run by njalla.srl in Costa Rica, on its own Swedish machines. Sign up with an email or XMPP address, and pay in crypto. Njalla is the legal registrant of domains you buy: y[…](https://awesome-privacy.xyz/networking/cloud-hosting/njalla "View full Njalla report") 
+- **[<img src='https://getbunker.net/images/en/svg/logo.svg' width='14' alt='' /> Bunker](https://getbunker.net)** - French sovereign cloud from France Nuage: managed open-source apps, PostgreSQL and S3-compatible storage in its own datacenters. Source is public but under SSPL-1.0, which is not OSI-approved. ISO 270[…](https://awesome-privacy.xyz/networking/cloud-hosting/bunker "View full Bunker report") 
+- **[<img src='https://1984.hosting/favicon.ico' width='14' alt='' /> 1984](https://1984.hosting)** - Icelandic hosting, VPS and email, running on its own network (AS44925) and hardware since 2006. Bitcoin and Monero accepted, ISO 27001 certified, and powered by geothermal and hydro. Iceland sits outs[…](https://awesome-privacy.xyz/networking/cloud-hosting/1984 "View full 1984 report") 
+- **[<img src='https://www.infomaniak.com/favicon.ico' width='14' alt='' /> Infomaniak](https://www.infomaniak.com)** - Swiss web hosting, VPS and OpenStack cloud, from a company that builds and runs its own datacenters and network (AS29222). ISO 27001 certified since 2018, and Swiss law keeps it outside the 14 Eyes an[…](https://awesome-privacy.xyz/networking/cloud-hosting/infomaniak "View full Infomaniak report") 
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
 
-> The country that your data is hosted in, will be subject to local laws and regulations.
-> It is therefore important to avoid a jurisdiction that is part of the
-> [5 eyes](https://en.wikipedia.org/wiki/Five_Eyes) (Australia, Canada, New Zealand, US and UK)
-> and [other international cooperatives](https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives)
+> The country that your data is hosted in will be subject to local laws and regulations.
+> It is therefore important to avoid a jurisdiction that is part of the 5 eyes and
+> [other international cooperatives](https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives)
 > who have legal right to view your data.
 
 </details>
@@ -987,12 +983,14 @@ important.
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
 
-> See also: [1984](https://www.1984.is) based in Iceland.
-> [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers.
-> [Orange Website](https://www.orangewebsite.com) specialises in protecting online privacy and free speech, hosted in Iceland.
-> [RackBone](https://rackbone.ch) (previously DataCell) provides secure and ethical hosting, based in Switzerland.
-> And [Bahnhof](https://www.bahnhof.net) offers high-security and ethical hosting, with their data centres locates in Sweden.
-> Finally [Simafri](https://www.simafri.com/anonymous) has a range of packages, that support Tor out of the box
+> See also: [Bahnhof](https://bahnhof.cloud), which offers high-security hosting from its own data
+> centres in Sweden, but takes card and PayPal only.
+> [Greenhost](https://greenhost.net) runs its own network in Amsterdam, and hosts GlobaLeaks
+> whistleblowing platforms for journalists and NGOs.
+> [Exoscale](https://www.exoscale.com) is an ISO 27001 certified Swiss IaaS provider with EU zones,
+> though it is owned by Telekom Austria and colocates rather than owning its data centres.
+> And [FlokiNET](https://flokinet.is) hosts in Iceland, Finland and Romania, needs no personal data
+> and takes Monero, but its network is tracked by threat intelligence feeds for abuse.
 > </details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
@@ -1002,7 +1000,7 @@ important.
 ### Domain Registrars
 
 - **[<img src='https://njal.la/favicon.ico' width='14' alt='' /> Njal.la](https://njal.la)** - Privacy-aware domain service with anonymous sign-up and accepts cryptocurrency. 
-- **[<img src='https://orangewebsite.com/fav.ico' width='14' alt='' /> Orange Website](https://www.orangewebsite.com/domain-registration.php)** - Anonymous domain registration, with low online censorship since they are based outside the 14-eyes jurisdiction (in Iceland). 
+- **[<img src='https://orangewebsite.com/fav.ico' width='14' alt='' /> Orange Website](https://www.orangewebsite.com/domain-registration.php)** - Anonymous domain registration, with low online censorship since they are based outside the 14-eyes jurisdiction (in Iceland). Crypto is accepted, but through third-party gateways which reserve the rig[…](https://awesome-privacy.xyz/networking/domain-registrars/orange-website "View full Orange Website report") 
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
