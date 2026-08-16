@@ -2927,17 +2927,6 @@ categories:
           datacenters and network (AS29222). ISO 27001 certified since 2018, and Swiss law keeps it outside
           the 14 Eyes and the CLOUD Act. Card payment only, so there is no anonymous signup.
 
-      - name: Packetra
-        url: https://packetra.com
-        icon: https://packetra.com/favicon.ico
-        openSource: false
-        securityAudited: false
-        acceptsCrypto: true
-        description: |
-          Shared, VPS and dedicated hosting in Finland and Switzerland, with signup requiring no
-          identity documents and payment in Bitcoin or Monero via a self-hosted BTCPay instance.
-          The platform is not open source, and Tor exit nodes are not permitted.
-
       notableMentions: |
         See also: [Bahnhof](https://bahnhof.cloud), which offers high-security hosting from its own data
         centres in Sweden, but takes card and PayPal only.
@@ -2945,8 +2934,12 @@ categories:
         whistleblowing platforms for journalists and NGOs.
         [Exoscale](https://www.exoscale.com) is an ISO 27001 certified Swiss IaaS provider with EU zones,
         though it is owned by Telekom Austria and colocates rather than owning its data centres.
-        And [FlokiNET](https://flokinet.is) hosts in Iceland, Finland and Romania, needs no personal data
+        [FlokiNET](https://flokinet.is) hosts in Iceland, Finland and Romania, needs no personal data
         and takes Monero, but its network is tracked by threat intelligence feeds for abuse.
+        And [Packetra](https://packetra.com) offers hosting in Finland and Switzerland, with no identity
+        documents at signup and payment in Bitcoin or Monero via a self-hosted BTCPay instance, though it
+        is a new provider with no track record yet
+        (see [#749](https://github.com/lissy93/awesome-privacy/pull/749) for details).
       wordOfWarning: |
         The country that your data is hosted in will be subject to local laws and regulations.
         It is therefore important to avoid a jurisdiction that is part of the 5 eyes and
