@@ -989,8 +989,12 @@ providers that own and run their own infrastructure
 > whistleblowing platforms for journalists and NGOs.
 > [Exoscale](https://www.exoscale.com) is an ISO 27001 certified Swiss IaaS provider with EU zones,
 > though it is owned by Telekom Austria and colocates rather than owning its data centres.
-> And [FlokiNET](https://flokinet.is) hosts in Iceland, Finland and Romania, needs no personal data
+> [FlokiNET](https://flokinet.is) hosts in Iceland, Finland and Romania, needs no personal data
 > and takes Monero, but its network is tracked by threat intelligence feeds for abuse.
+> And [Packetra](https://packetra.com) offers hosting in Finland and Switzerland, with no identity
+> documents at signup and payment in Bitcoin or Monero via a self-hosted BTCPay instance, though it
+> is a new provider with no track record yet
+> (see [#749](https://github.com/lissy93/awesome-privacy/pull/749) for details).
 > </details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
