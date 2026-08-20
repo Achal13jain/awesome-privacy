@@ -3203,6 +3203,18 @@ categories:
           Note that CalDAV support is currently limited
           (see [#921](https://github.com/FossifyOrg/Calendar/issues/921)
 
+      - name: KashCal
+        url: https://kashcal.onekash.org
+        github: KashCal/KashCal
+        androidApp: org.onekash.kashcal
+        followWith: Android
+        icon: https://raw.githubusercontent.com/KashCal/KashCal/main/images/kashcal-app.png
+        description: |
+          Offline-first Android calendar that syncs with iCloud, CalDAV and device
+          calendars. No account, no telemetry; credentials are stored in the Android
+          Keystore. Events are not end-to-end encrypted, so sync security depends on
+          your provider.
+
     ########################
     ###### Scheduling ######
     ########################
