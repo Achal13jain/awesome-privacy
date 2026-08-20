@@ -64,7 +64,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Servers](#mail-servers) (3)
 - **Productivity**
 	- [Digital Notes](#digital-notes) (8)
-	- [Calendar](#calendar) (3)
+	- [Calendar](#calendar) (4)
 	- [Scheduling](#scheduling) (2)
 	- [Task Management](#task-management) (2)
 	- [Backup and Sync](#backup-and-sync) (4)
@@ -1079,6 +1079,7 @@ providers that own and run their own infrastructure
 - **[<img src='https://calendar.proton.me/assets/android-chrome-256x256.png' width='14' alt='' /> Proton Calendar](https://proton.me/calendar)** - The calendar app from the Proton suite. End-to-end encrypted. Supports ICS (not encrypted), colours, recurring events, mail integration, notifications and multiple time zones. 
 - **[<img src='https://raw.githubusercontent.com/nextcloud/calendar/refs/heads/main/img/favicon.png' width='14' alt='' /> Nextcloud Calendar](https://apps.nextcloud.com/apps/calendar)** - Calendar app for the self-hosted Nextcloud platform. Uses CalDAV for sync across devices. No E2E encryption support. 
 - **[<img src='https://raw.githubusercontent.com/FossifyOrg/Calendar/refs/heads/main/graphics/icon.webp' width='14' alt='' /> Fossify Calendar](https://www.fossify.org/)** - Fossify Calendar from the family of forked FOSS apps from the discontinued SimpleMobileTools. Simple, customizable, includes widgets. Note that CalDAV support is currently limited (see [#921](https://github.com/FossifyOrg/Calendar/issues/921)[…](https://awesome-privacy.xyz/productivity/calendar/fossify-calendar "View full Fossify Calendar report") 
+- **[<img src='https://raw.githubusercontent.com/KashCal/KashCal/main/images/kashcal-app.png' width='14' alt='' /> KashCal](https://kashcal.onekash.org)** - Offline-first Android calendar that syncs with iCloud, CalDAV and device calendars. No account, no telemetry; credentials are stored in the Android Keystore. Events are not end-to-end encrypted, so sy[…](https://awesome-privacy.xyz/productivity/calendar/kashcal "View full KashCal report") 
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 

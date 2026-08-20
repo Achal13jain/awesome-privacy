@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T13:17:18Z",
+  "generatedAt": "2026-08-20T11:52:59Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -166,6 +166,7 @@
     "c151cbac982e8a79424da7041cf422009a8d5f87",
     "c34654569457ae084fbde06c77d2b80c55aba43a",
     "c58dec4d6fc4226b3365df168b68baefc02e12ac",
+    "c7f8119340e8bc7dc290e12859c6af720f06eadf",
     "c867fd7423f3e4b8e455b435018be8fc3bd6c99a",
     "c9c49f8cde13d978c4fbdefbb78bc4de45546492",
     "ca4702933d6234a50f654e034869ed66a1dfd043",
@@ -403,9 +404,35 @@
     745,
     747,
     748,
-    750
+    750,
+    752,
+    753,
+    756
   ],
   "entries": [
+    {
+      "date": "2026-08-20",
+      "sha": "c7f8119340e8bc7dc290e12859c6af720f06eadf",
+      "pr": {
+        "number": 754,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/754",
+        "author": "one-kash",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/26795040?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "KashCal",
+              "category": "Productivity",
+              "section": "Calendar"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-15",
       "sha": "350dd06439fdba13c56d4138a86f1b759a221677",
@@ -6956,6 +6983,26 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-20",
+      "title": "Adds [NOT]KYC to Crypto Exchanges",
+      "pr": {
+        "number": 756,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/756",
+        "author": "notkyc",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/318944898?v=4"
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Add Mirror Veil (Security Tools > Online Tools)",
+      "pr": {
+        "number": 752,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/752",
+        "author": "justlayme",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/257996955?v=4"
+      }
+    },
     {
       "date": "2026-08-13",
       "title": "Add YazSes to Accessibility",
