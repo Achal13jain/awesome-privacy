@@ -40,7 +40,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Email Security Tools](#email-security-tools) (3)
 	- [VOIP Clients](#voip-clients) (2)
 	- [Virtual Phone Numbers](#virtual-phone-numbers) (8)
-	- [Team Collaboration](#team-collaboration) (6)
+	- [Team Collaboration](#team-collaboration) (7)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (21)
 	- [Mobile Apps](#mobile-apps) (22)
@@ -311,6 +311,7 @@ With [Peer-to-Peer](https://en.wikipedia.org/wiki/Peer-to-peer) networks, there 
 > - [Cwtch](https://cwtch.im)
 > - [BitMessage](https://github.com/Bitmessage/PyBitmessage)
 > - [RetroShare](https://retroshare.cc)
+> - [Xeres](https://xeres.io)
 </details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
@@ -449,6 +450,7 @@ Now more than ever we are relying on software to help with team collaboration. U
 - **[<img src='https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png' width='14' alt='' /> Internet Relay Chat](https://en.wikipedia.org/wiki/IRC)** - An IRC-based solution is another option, being decentralized there is no point of failure, and it's easy to self-host. However it's important to keep security in mind while configuring your IRC instan[…](https://awesome-privacy.xyz/communication/team-collaboration/internet-relay-chat "View full Internet Relay Chat report") 
 - **[<img src='https://avatars.githubusercontent.com/u/9828093' width='14' alt='' /> Mattermost](https://mattermost.org/)** - Mattermost has an open source edition, which can be self-hosted. It makes a good Slack alternative, with native desktop, mobile and web apps and a wide variety of integrations. 
 - **[<img src='https://avatars.githubusercontent.com/u/4921959?s=256&v=4' width='14' alt='' /> Zulip](https://zulip.com)** - Open source team chat organized around topic-based threading, which keeps busy conversations easier to follow than channel-only tools. Can be self-hosted, or used as a paid cloud service. The threadin[…](https://awesome-privacy.xyz/communication/team-collaboration/zulip "View full Zulip report") 
+- **[<img src='https://xeres.io/wp-content/uploads/cropped-cropped-favicon-1-e1623491252400.png' width='14' alt='' /> Xeres](https://xeres.io)** - A decentralized, encrypted P2P friend-to-friend app for chat, forums, channels, boards, voice calls and anonymous file sharing. Best for trusted contacts, as it isn't anonymous unless you route it thr[…](https://awesome-privacy.xyz/communication/team-collaboration/xeres "View full Xeres report") 
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>

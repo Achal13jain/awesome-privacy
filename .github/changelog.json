@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T11:52:59Z",
+  "generatedAt": "2026-08-24T18:46:17Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -89,6 +89,7 @@
     "615fc63dbbcfc19a5fb911d893c2bc40ad33ab69",
     "61613ca195b2b09ccaa9658d054b3d478b4d8476",
     "639eb6794696341f32b582c50a0ecd7a91db52d1",
+    "6659279e2aa0c05dbc1041a2d90434a2204ddac5",
     "690d3e40da8b0ef98b93ba5bf066dc88a84027cb",
     "698e818f03fda883ec55a630bd9380d7cf214bb8",
     "69f6a2755a08caaa814201be36c9a809961b7f78",
@@ -407,9 +408,36 @@
     750,
     752,
     753,
-    756
+    756,
+    758,
+    759,
+    761,
+    762
   ],
   "entries": [
+    {
+      "date": "2026-08-24",
+      "sha": "6659279e2aa0c05dbc1041a2d90434a2204ddac5",
+      "pr": {
+        "number": 678,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/678",
+        "author": "zapek",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/4717816?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "Xeres",
+              "category": "Communication",
+              "section": "Team Collaboration"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-20",
       "sha": "c7f8119340e8bc7dc290e12859c6af720f06eadf",
@@ -6984,6 +7012,46 @@
   ],
   "rejections": [
     {
+      "date": "2026-08-24",
+      "title": "Add Earkeep",
+      "pr": {
+        "number": 762,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/762",
+        "author": "jakubkulhan",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/95001?v=4"
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Add Period Trackers section with Niah and drip",
+      "pr": {
+        "number": 761,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/761",
+        "author": "Pixels512",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/261778609?v=4"
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Add BuyUKeSIM to Virtual Phone Numbers",
+      "pr": {
+        "number": 759,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/759",
+        "author": "BuyUKeSIM",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/302600747?v=4"
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "title": "feat: add Data Broker Removal category with CyberForget",
+      "pr": {
+        "number": 758,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/758",
+        "author": "Cryptocatcherz",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/165894862?v=4"
+      }
+    },
+    {
       "date": "2026-08-20",
       "title": "Adds [NOT]KYC to Crypto Exchanges",
       "pr": {
@@ -8574,16 +8642,6 @@
       }
     },
     {
-      "date": "2026-02-22",
-      "title": "Adds FFmpeg to File Converters",
-      "pr": {
-        "number": 388,
-        "url": "https://github.com/Lissy93/awesome-privacy/pull/388",
-        "author": "Bd-Mutant7",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/182138871?v=4"
-      }
-    },
-    {
       "date": "2026-02-20",
       "title": "Update awesome-privacy.yml",
       "pr": {
@@ -8591,16 +8649,6 @@
         "url": "https://github.com/Lissy93/awesome-privacy/pull/386",
         "author": "darkvpshosting",
         "authorAvatar": "https://avatars.githubusercontent.com/u/245390928?v=4"
-      }
-    },
-    {
-      "date": "2026-02-22",
-      "title": "Adds 5 file converters to Media section",
-      "pr": {
-        "number": 385,
-        "url": "https://github.com/Lissy93/awesome-privacy/pull/385",
-        "author": "Bd-Mutant7",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/182138871?v=4"
       }
     },
     {
